@@ -7,7 +7,7 @@ Proposal landing and deliverables for **Rootstock CL Agent x Wake Up Labs**.
 | Piece | Role |
 |--------|------|
 | **Vercel** | Hosts `web/` (static site + `/api/contact` serverless) |
-| **Cloudflare** | DNS (and optional proxy/WAF) for `rootstock.wakeuplabs.io` → Vercel |
+| **Cloudflare** | DNS (and optional proxy/WAF) for `rootstock.wup.ar` → Vercel |
 | **Supabase** | Postgres table `contact_submissions`; API inserts via **service_role** on Vercel only |
 
 Details: [`docs/cloudflare-vercel.md`](docs/cloudflare-vercel.md), [`supabase/README.md`](supabase/README.md).
@@ -18,7 +18,7 @@ Details: [`docs/cloudflare-vercel.md`](docs/cloudflare-vercel.md), [`supabase/RE
 2. New Vercel project → import repo → set **Root Directory** to **`web`**.
 3. Add env vars: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`.
 4. Run Supabase migration (see `supabase/migrations/`) or `supabase db push`.
-5. In Vercel, add custom domain **`rootstock.wakeuplabs.io`**.
+5. In Vercel, add custom domain **`rootstock.wup.ar`** (and DNS en Cloudflare según lo que indique Vercel).
 6. In **Cloudflare**, CNAME that hostname to the target Vercel shows (often `cname.vercel-dns.com`). Use **SSL: Full (strict)** when the cert is active on Vercel.
 
 ## Local env (optional)

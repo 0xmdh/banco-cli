@@ -2,6 +2,8 @@
 
 This folder is the **Vercel project root**: set **Root Directory** to `web` in the Vercel dashboard (or connect only this path in a monorepo).
 
+**Production URL:** `https://rootstock.wup.ar` (custom domain en Vercel + DNS).
+
 ## Files
 
 - `index.html`, `styles.css`, `app.js` — landing UI

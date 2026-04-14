@@ -4,7 +4,7 @@ Use **Cloudflare DNS** (and optional proxy) in front of **Vercel** hosting.
 
 ## DNS
 
-1. In Vercel: add the custom domain (e.g. `rootstock.wakeuplabs.io`) and follow Vercel’s instructions.
+1. In Vercel: add the custom domain (e.g. `rootstock.wup.ar`) and follow Vercel’s instructions.
 2. In Cloudflare **DNS** for the zone:
    - **CNAME** `rootstock` → `cname.vercel-dns.com` (or the hostname Vercel shows).
    - If you use the apex domain, use the **A** / **ALIAS** pattern Vercel documents for apex.

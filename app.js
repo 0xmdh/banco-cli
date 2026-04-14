@@ -143,7 +143,7 @@
       var email = (fd.get("email") || "").toString().trim();
       var role = (fd.get("role") || "").toString().trim();
       var message = (fd.get("message") || "").toString().trim();
-      var subject = encodeURIComponent("Rootstock CL Agent Pilot");
+      var subject = encodeURIComponent("Rootstock CLI Agent Pilot");
       var mailBody = encodeURIComponent(
         "Name: " + name + "\nEmail: " + email + "\nI am a: " + role + "\n\n" + message
       );

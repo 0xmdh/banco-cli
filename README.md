@@ -1,6 +1,6 @@
 # rootstock-institutional
 
-Proposal landing and deliverables for **Rootstock CL Agent x Wake Up Labs**.
+Proposal landing and deliverables for **Rootstock CLI Agent x Wake Up Labs**.
 
 ## Stack
 

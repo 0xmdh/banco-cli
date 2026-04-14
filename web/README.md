@@ -1,4 +1,4 @@
-# Rootstock CL Agent x Wake Up Labs — Web (Vercel)
+# Rootstock CLI Agent x Wake Up Labs — Web (Vercel)
 
 This folder is the **Vercel project root**: set **Root Directory** to `web` in the Vercel dashboard (or connect only this path in a monorepo).
 

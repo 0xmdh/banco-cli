@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rootstock CL Agent x Wake Up Labs</title>
+    <meta
+      name="description"
+      content="Rootstock CL Agent x Wake Up Labs — turn institutional intent into funded vault positions with a policy-aware agent for onboarding and vault flows."
+    />
+    <script>
+      (function () {
+        var t = null;
+        try {
+          t = localStorage.getItem("rootstock-theme");
+        } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <link rel="preconnect" href="https://www.rootstocklabs.com" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand" lang="en">Rootstock CL Agent <span class="brand__x">x</span> Wake Up Labs</div>
+        <div class="nav-actions">
+          <div
+            class="theme-toggle"
+            role="group"
+            aria-label="Color theme"
+          >
+            <button
+              type="button"
+              class="theme-toggle__btn is-active"
+              id="theme-day"
+              aria-pressed="true"
+            >
+              Day
+            </button>
+            <button
+              type="button"
+              class="theme-toggle__btn"
+              id="theme-night"
+              aria-pressed="false"
+            >
+              Night
+            </button>
+          </div>
+          <a
+            class="btn btn-secondary btn-nav"
+            href="https://zcal.co/wakeuplabs"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Book strategy call</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero: two columns + interactive terminal -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Institutional funnel acceleration for Bitcoin DeFi</p>
+            <h1>
+              From institutional intent to funded vaults.<br />
+              <span class="h1-sub">Faster conversion. Stronger AUM.</span>
+            </h1>
+            <p class="lead">
+              A policy-aware CL Agent that guides institutions from qualification to first BTC/USD
+              vault allocation, then drives repeat deposits with proactive lifecycle workflows.
+            </p>
+            <div class="actions">
+              <a
+                class="btn btn-primary"
+                href="https://zcal.co/wakeuplabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Book strategy call</a>
+              <a class="btn btn-secondary" href="#pilot">See pilot blueprint</a>
+            </div>
+            <p class="proof">
+              Designed for measurable outcomes: lower onboarding friction, faster
+              time-to-first-deposit, and stronger institutional AUM retention.
+            </p>
+          </div>
+          <div class="hero-visual">
+            <figure class="terminal-card" aria-label="Illustrative CLI snippet">
+              <div class="terminal-card__bar">
+                <span class="terminal-card__dots" aria-hidden="true"></span>
+                <span class="terminal-card__title">rootstock-cli</span>
+                <button type="button" class="terminal-card__copy" data-copy-for="hero">
+                  Copy
+                </button>
+              </div>
+              <div
+                class="terminal-card__body"
+                contenteditable="true"
+                spellcheck="false"
+                data-terminal-body="hero"
+                role="textbox"
+                aria-multiline="true"
+                aria-label="Editable CLI example. Edits are saved in this browser."
+              ># Illustrative commands (pilot proposal)
+curl -fsSL https://example.rootstock.dev/cli | sh
+rootstock institutional session start --org "NorthBridge Capital"
+# OK Policy and custody context loaded
+# OK Qualification checklist — vault allocation paths available
+# Ready for institutional vault workflows</div>
+            </figure>
+            <p class="terminal-note">
+              Illustrative commands for a proposal demo. Edit the snippet — your changes are saved
+              in this browser.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Why institutional leads stall before funding</h2>
+          <p class="section-lead">
+            Institutional intent is strong, but the path to deployment is fragmented across legal
+            checks, custody workflows, bridge decisions, and allocation execution.
+          </p>
+          <ul class="grid-list">
+            <li>Multiple teams involved, no single guided workflow.</li>
+            <li>High diligence load before first allocation.</li>
+            <li>Unclear next steps after initial deposit.</li>
+            <li>Lost AUM expansion due to operational friction.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <h2>A CL Agent built for institutional conversion and lifecycle growth</h2>
+          <p class="section-lead">
+            The Rootstock CL Agent combines conversational guidance, command-based
+            actions, and policy-aware checkpoints to move users from intent to funded
+            participation.
+          </p>
+          <div class="cards">
+            <article class="card">
+              <h3>Onboard</h3>
+              <p>Guide eligibility, policy constraints, and setup prerequisites.</p>
+            </article>
+            <article class="card">
+              <h3>Allocate</h3>
+              <p>Provide structured flows for first BTC/USD vault allocation.</p>
+            </article>
+            <article class="card">
+              <h3>Monitor</h3>
+              <p>Deliver concise, auditable portfolio and vault updates.</p>
+            </article>
+            <article class="card">
+              <h3>Rebalance</h3>
+              <p>Support treasury adjustments based on thresholds and rules.</p>
+            </article>
+            <article class="card">
+              <h3>Notify</h3>
+              <p>Trigger re-deposit and risk prompts to keep AUM active.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Launch flows: 3 steps + compact terminals -->
+      <section class="section launch" id="flows">
+        <div class="container">
+          <p class="section-kicker">Launch institutional flows fast</p>
+          <h2>From setup to first allocation in a few guided steps</h2>
+          <p class="section-lead">
+            Connect policy context, qualify the account, and move to vault allocation without losing
+            momentum across teams.
+          </p>
+          <ol class="steps">
+            <li class="steps__item">
+              <div class="steps__num">1</div>
+              <div class="steps__content">
+                <h3>Connect institutional context</h3>
+                <p>
+                  Set org profile, roles, and permissions so the agent operates inside approved
+                  boundaries.
+                </p>
+                <figure class="terminal-card terminal-card--compact" aria-label="Step 1 CLI">
+                  <div class="terminal-card__bar">
+                    <span class="terminal-card__title">step 1</span>
+                    <button type="button" class="terminal-card__copy" data-copy-for="flow-1">
+                      Copy
+                    </button>
+                  </div>
+                  <div
+                    class="terminal-card__body"
+                    contenteditable="true"
+                    spellcheck="false"
+                    data-terminal-body="flow-1"
+                    role="textbox"
+                    aria-multiline="true"
+                  >rootstock institutional session start \
+  --org "NorthBridge Capital" \
+  --role "treasury_manager"</div>
+                </figure>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__num">2</div>
+              <div class="steps__content">
+                <h3>Qualify and route</h3>
+                <p>
+                  Run checks and get a clear go/no-go with the next operational step surfaced automatically.
+                </p>
+                <figure class="terminal-card terminal-card--compact" aria-label="Step 2 CLI">
+                  <div class="terminal-card__bar">
+                    <span class="terminal-card__title">step 2</span>
+                    <button type="button" class="terminal-card__copy" data-copy-for="flow-2">
+                      Copy
+                    </button>
+                  </div>
+                  <div
+                    class="terminal-card__body"
+                    contenteditable="true"
+                    spellcheck="false"
+                    data-terminal-body="flow-2"
+                    role="textbox"
+                    aria-multiline="true"
+                  >rootstock institutional qualify \
+  --check kyc,aml,custody,policy \
+  --output summary</div>
+                </figure>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__num">3</div>
+              <div class="steps__content">
+                <h3>Allocate and activate lifecycle</h3>
+                <p>
+                  Submit allocation plans behind approvals, then enable monitoring and re-deposit
+                  notifications.
+                </p>
+                <figure class="terminal-card terminal-card--compact" aria-label="Step 3 CLI">
+                  <div class="terminal-card__bar">
+                    <span class="terminal-card__title">step 3</span>
+                    <button type="button" class="terminal-card__copy" data-copy-for="flow-3">
+                      Copy
+                    </button>
+                  </div>
+                  <div
+                    class="terminal-card__body"
+                    contenteditable="true"
+                    spellcheck="false"
+                    data-terminal-body="flow-3"
+                    role="textbox"
+                    aria-multiline="true"
+                  >rootstock allocate plan --vaults btc,usd --mode guided
+rootstock lifecycle notify --rule redeposit --cadence weekly</div>
+                </figure>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>What this enables in practice</h2>
+          <div class="cards two-col">
+            <article class="card">
+              <h3>Pre-deposit qualification</h3>
+              <p>
+                The agent answers recurring diligence questions and routes teams to the exact next
+                operational step.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Guided first allocation</h3>
+              <p>
+                Convert interested leads into first funded BTC/USD vault positions through one
+                guided path.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Post-deposit retention</h3>
+              <p>
+                Keep treasury teams active with policy-safe notifications and expansion
+                opportunities.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Institutional operating rhythm</h3>
+              <p>Turn daily monitoring, action preparation, and allocation into one workflow.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Agentic flow: topology + status terminal -->
+      <section class="section alt agentic">
+        <div class="container">
+          <p class="section-kicker">Institutional flow</p>
+          <h2>One programmable layer from intent to vault participation</h2>
+          <p class="section-lead">
+            Topology mirrors how teams actually operate: policy first, then rails, then lifecycle
+            signals back to treasury.
+          </p>
+          <div class="agentic-grid">
+            <div class="agentic-topology-wrap">
+              <div class="topology-header">
+                <span class="topology-label">Topology</span>
+                <button
+                  type="button"
+                  class="terminal-card__copy terminal-card__copy--ghost"
+                  data-copy-text="#topology-block"
+                >
+                  Copy
+                </button>
+              </div>
+              <pre class="topology-pre" id="topology-block" aria-label="Flow topology">Institutional desk
++-- Rootstock CL Agent
+|   +-- Policy + approvals
+|   +-- Custodian / wallet stack
+|   +-- Rootstock vault rails (BTC / USD)
+|   +-- Lifecycle notifications
+|       +-- monitor
+|       +-- qualify
+|       +-- redeposit</pre>
+            </div>
+            <figure class="terminal-card" aria-label="Flow status output">
+              <div class="terminal-card__bar">
+                <span class="terminal-card__title">flow status</span>
+                <button type="button" class="terminal-card__copy" data-copy-for="agentic">
+                  Copy
+                </button>
+              </div>
+              <div
+                class="terminal-card__body terminal-card__body--json"
+                contenteditable="true"
+                spellcheck="false"
+                data-terminal-body="agentic"
+                role="textbox"
+                aria-multiline="true"
+              >{
+  "session": "northbridge_capital",
+  "stage": "allocate_ready",
+  "policy": "pending_dual_sign",
+  "vaults": ["btc", "usd"],
+  "next": "submit_plan_for_approval"
+}</div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Designed for institutional controls from day one</h2>
+          <p class="section-lead">
+            The agent acts as an orchestration layer above existing custody and policy processes,
+            reducing complexity without bypassing governance.
+          </p>
+          <pre class="diagram" aria-label="High-level architecture">
+Institutional Team
+   |
+Rootstock CL Agent
+   |-- Policy and Approval Layer
+   |-- Custodian / Wallet Stack
+   |-- Rootstock Vault Rails
+   `-- Lifecycle Notification Engine
+          </pre>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <h2>KPIs tied to growth, not vanity metrics</h2>
+          <ul class="kpis">
+            <li>Lead-to-qualified institutional conversion</li>
+            <li>Qualified-to-onboarded completion</li>
+            <li>Onboarded-to-first-funded allocation</li>
+            <li>First-to-second deposit conversion</li>
+            <li>Active institutional AUM retention and expansion</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Commands grid (Uphold-style) -->
+      <section class="section commands" id="commands">
+        <div class="container">
+          <p class="section-kicker">Command surface</p>
+          <h2>Programmable commands for institutional funnel operations</h2>
+          <p class="section-lead">
+            Inspect before you execute. Every critical path can require explicit approvals in
+            production.
+          </p>
+          <ul class="command-list">
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock institutional qualify</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Run eligibility and policy checks with a summary for decision-makers.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock vaults recommend</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Map mandate and risk profile to BTC/USD vault pathways.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock allocate plan</code>
+              <span class="command-list__badge command-list__badge--execute">Execute</span>
+              <span class="command-list__desc"
+                >Draft allocation plans with approval gates and audit trail.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock positions monitor</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Concise KPI view for treasury and ops without noise.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock lifecycle notify</code>
+              <span class="command-list__badge command-list__badge--execute">Execute</span>
+              <span class="command-list__desc"
+                >Configure re-deposit and drift rules that keep AUM active.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock policy explain</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Show why an action is allowed, blocked, or needs human approval.</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="pilot" class="section">
+        <div class="container">
+          <h2>Start with a focused 4-6 week pilot</h2>
+          <div class="cards two-col">
+            <article class="card">
+              <h3>Scope</h3>
+              <ul>
+                <li>Funnel discovery and prioritization</li>
+                <li>Agent workflow for onboarding and first allocation</li>
+                <li>Lifecycle strategy for re-deposit behavior</li>
+                <li>KPI instrumentation and reporting model</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Deliverables</h3>
+              <ul>
+                <li>Working demo flows</li>
+                <li>Funnel KPI dashboard definition</li>
+                <li>Pilot retrospective and rollout recommendation</li>
+                <li>Decision-ready implementation plan</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Build with us + form -->
+      <section id="build" class="section alt build">
+        <div class="container build-grid">
+          <div class="build-copy">
+            <p class="section-kicker">Build with us</p>
+            <h2>Launch institutional agent workflows on Rootstock</h2>
+            <p class="section-lead">
+              Tell us which funnel stages stall today, how custody and policy approvals work, and
+              what “funded vault position” means for your target accounts. We will come back with
+              example flows, integration guidance, and clear next steps.
+            </p>
+            <ul class="build-bullets">
+              <li>Teams scaling institutional BTC/USD vault participation.</li>
+              <li>Platforms orchestrating treasury, compliance, and on-chain allocation.</li>
+              <li>Enterprises needing faster conversion without weakening controls.</li>
+            </ul>
+          </div>
+          <div class="build-form-wrap">
+            <form id="contact-form" class="contact-form" novalidate>
+              <label class="field">
+                <span class="field__label">Name</span>
+                <input class="field__input" type="text" name="name" autocomplete="name" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" autocomplete="email" required />
+              </label>
+              <label class="field">
+                <span class="field__label">I am a…</span>
+                <select class="field__input" name="role" required>
+                  <option value="">Select…</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Business">Business</option>
+                  <option value="Institution">Institution</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field__label">Message (optional)</span>
+                <textarea class="field__input field__textarea" name="message" rows="4"></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary btn-block">Talk to the team</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="section cta">
+        <div class="container">
+          <h2>The institutional funnel needs an operator, not just documentation.</h2>
+          <p>
+            If Rootstock wants more capital flowing into vault participation, we can bring a
+            pilot-ready agent flow, KPI model, and implementation plan to the next meeting.
+          </p>
+          <a
+            class="btn btn-primary"
+            href="https://zcal.co/wakeuplabs"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Book strategy call</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-logos" aria-label="Wake Up Labs and Rootstock">
+        <div class="container footer-logos__inner">
+          <a
+            class="footer-logo-link"
+            href="https://www.wakeuplabs.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="footer-logo footer-logo--wul"
+              src="https://www.wakeuplabs.io/images/logo-wakeup-labs-white.png"
+              alt="Wake Up Labs"
+              width="180"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a
+            class="footer-logo-link"
+            href="https://www.rootstocklabs.com/institutional/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="footer-logo footer-logo--rs"
+              src="https://www.rootstocklabs.com/icons/icon-192x192.png"
+              alt="Rootstock"
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="footer-logo-wordmark" aria-hidden="true">Rootstock</span>
+          </a>
+        </div>
+      </div>
+      <div class="container footer-inner">
+        <p class="footer-note">
+          Proposal by Wake Up Labs. Commands and outputs shown here are illustrative unless otherwise
+          agreed with Rootstock.
+        </p>
+      </div>
+    </footer>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

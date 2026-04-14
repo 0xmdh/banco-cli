@@ -2,26 +2,36 @@
 
 Proposal landing and deliverables for **Rootstock CL Agent x Wake Up Labs**.
 
-## Production (`rootstock.wakeuplabs.io`)
+## Stack
 
-1. Create a remote repository and push **`main`**:
+| Piece | Role |
+|--------|------|
+| **Vercel** | Hosts `web/` (static site + `/api/contact` serverless) |
+| **Cloudflare** | DNS (and optional proxy/WAF) for `rootstock.wakeuplabs.io` → Vercel |
+| **Supabase** | Postgres table `contact_submissions`; API inserts via **service_role** on Vercel only |
 
-```bash
-git remote add origin <YOUR_GIT_URL>
-git push -u origin main
-```
+Details: [`docs/cloudflare-vercel.md`](docs/cloudflare-vercel.md), [`supabase/README.md`](supabase/README.md).
 
-2. In **Netlify**, “Add new site” → import the repo. The included [`netlify.toml`](netlify.toml) sets **`publish = "landing"`** so the site is served from that folder.
+## Deploy (Vercel)
 
-3. In Netlify **Domain management**, add **`rootstock.wakeuplabs.io`** and follow DNS instructions (often a CNAME to the Netlify target).
+1. Push **`main`** to your Git remote.
+2. New Vercel project → import repo → set **Root Directory** to **`web`**.
+3. Add env vars: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`.
+4. Run Supabase migration (see `supabase/migrations/`) or `supabase db push`.
+5. In Vercel, add custom domain **`rootstock.wakeuplabs.io`**.
+6. In **Cloudflare**, CNAME that hostname to the target Vercel shows (often `cname.vercel-dns.com`). Use **SSL: Full (strict)** when the cert is active on Vercel.
 
-**Vercel:** new project from the same repo, set **Root Directory** to `landing`, then attach the custom domain.
+## Local env (optional)
+
+Copy [`.env.example`](.env.example) to `web/.env.local` when using `vercel dev` (Vercel loads it for serverless).
 
 ## CTAs
 
-- **Book strategy call** → [https://zcal.co/wakeuplabs](https://zcal.co/wakeuplabs) (opens in a new tab).
+- **Book strategy call** → [https://zcal.co/wakeuplabs](https://zcal.co/wakeuplabs)
 
-## Content
+## Repo layout
 
-- [`landing/`](landing/) — static site (HTML/CSS/JS).
-- [`deliverables/`](deliverables/) — messaging, copy, pilot notes.
+- [`web/`](web/) — production site + API
+- [`supabase/`](supabase/) — SQL migrations
+- [`deliverables/`](deliverables/) — messaging, copy, pilot notes
+- [`docs/`](docs/) — infra notes

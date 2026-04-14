@@ -143,12 +143,50 @@
       var email = (fd.get("email") || "").toString().trim();
       var role = (fd.get("role") || "").toString().trim();
       var message = (fd.get("message") || "").toString().trim();
-      var subject = encodeURIComponent("Rootstock CLI Agent Pilot");
-      var body = encodeURIComponent(
+      var subject = encodeURIComponent("Rootstock CL Agent Pilot");
+      var mailBody = encodeURIComponent(
         "Name: " + name + "\nEmail: " + email + "\nI am a: " + role + "\n\n" + message
       );
-      window.location.href =
-        "mailto:hello@wakeuplabs.io?subject=" + subject + "&body=" + body;
+      function mailtoFallback() {
+        window.location.href =
+          "mailto:hello@wakeuplabs.io?subject=" + subject + "&body=" + mailBody;
+      }
+
+      var btn = form.querySelector('button[type="submit"]');
+      var prevLabel = btn ? btn.textContent : "";
+      if (btn) {
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+      }
+
+      fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: name, email: email, role: role, message: message }),
+      })
+        .then(function (res) {
+          return res.json().then(function (data) {
+            if (!res.ok) throw new Error(data.error || "Request failed");
+            return data;
+          });
+        })
+        .then(function () {
+          if (btn) btn.textContent = "Sent";
+          form.reset();
+          setTimeout(function () {
+            if (btn) {
+              btn.textContent = prevLabel;
+              btn.disabled = false;
+            }
+          }, 2200);
+        })
+        .catch(function () {
+          if (btn) {
+            btn.textContent = prevLabel;
+            btn.disabled = false;
+          }
+          mailtoFallback();
+        });
     });
   }
 

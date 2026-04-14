@@ -412,10 +412,19 @@ p {
 .terminal-card__bar {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   padding: 10px 14px;
   background: var(--rs-terminal-bar);
   border-bottom: 1px solid var(--rs-border-soft);
+}
+
+/* Reserve width so the 3 “traffic light” dots (via box-shadow) don’t overlap the title */
+.terminal-card__dots {
+  flex: 0 0 auto;
+  display: block;
+  min-width: 52px;
+  height: 8px;
+  margin-right: 4px;
 }
 
 .terminal-card__dots::before {
@@ -430,6 +439,7 @@ p {
 
 .terminal-card__title {
   flex: 1;
+  min-width: 0;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
     monospace;
   font-size: 0.72rem;

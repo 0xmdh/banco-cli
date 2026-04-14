@@ -1,6 +1,6 @@
 .DS_Store
-.env
-.env.*
+.env*
+!.env.example
 *.log
 web/node_modules/
 .vercel

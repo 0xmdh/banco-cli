@@ -14,6 +14,7 @@
 
 ## Features
 
+- **Book strategy call** opens [https://zcal.co/wakeuplabs](https://zcal.co/wakeuplabs) in a new tab.
 - **Day / Night:** Toggle in the header. Preference is stored in `localStorage` under `rootstock-theme`. **Day** matches the institutional cream/light look; **Night** is a dark inversion using the same font stack. First visit defaults to **Day** (light).
 - **Interactive terminals:** Hero, three “launch flow” steps, and “flow status” blocks use `contenteditable` bodies. Edits are saved per snippet in `localStorage` as `rootstock-snippet-<id>`.
 - **Copy:** Each terminal and the topology block have a **Copy** button (uses the Clipboard API with a fallback).

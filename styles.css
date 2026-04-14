@@ -100,26 +100,26 @@ body {
   background-color: var(--rs-body-bg);
 }
 
-/* Layout — container rhythm (slightly more inset than stock RS for header / CTAs) */
+/* Layout — container rhythm (generous horizontal inset so header/title never hugs the viewport) */
 .container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding-left: max(24px, env(safe-area-inset-left, 0px));
-  padding-right: max(24px, env(safe-area-inset-right, 0px));
+  padding-left: max(32px, env(safe-area-inset-left, 0px));
+  padding-right: max(32px, env(safe-area-inset-right, 0px));
 }
 
 @media (min-width: 640px) {
   .container {
-    padding-left: max(40px, env(safe-area-inset-left, 0px));
-    padding-right: max(40px, env(safe-area-inset-right, 0px));
+    padding-left: max(48px, env(safe-area-inset-left, 0px));
+    padding-right: max(48px, env(safe-area-inset-right, 0px));
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    padding-left: max(72px, env(safe-area-inset-left, 0px));
-    padding-right: max(72px, env(safe-area-inset-right, 0px));
+    padding-left: max(96px, env(safe-area-inset-left, 0px));
+    padding-right: max(96px, env(safe-area-inset-right, 0px));
   }
 }
 

@@ -2,6 +2,15 @@
 
 Use **Cloudflare DNS** (and optional proxy) in front of **Vercel** hosting.
 
+## Static routes
+
+This repo serves **two HTML entry points** from the same deployment:
+
+- **`/`** — institutional proposal (`index.html`)
+- **`/retail/`** — retail & ecosystem proposal (`retail/index.html`)
+
+No special rewrite is required on Vercel for static files. `POST /api/contact` remains at the site root and works from both pages.
+
 ## DNS
 
 1. In Vercel: add the custom domain (e.g. `rootstock.wup.ar`) and follow Vercel’s instructions.

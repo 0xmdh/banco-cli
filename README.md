@@ -2,6 +2,15 @@
 
 Proposal landing and deliverables for **Rootstock CLI Agent x Wake Up Labs**.
 
+## Site structure (two audiences, separate pages)
+
+| Path | Audience |
+|------|-----------|
+| **`/`** ([`index.html`](index.html) or [`web/index.html`](web/index.html)) | **Institutional** — vault funnel, compliance-oriented CLI agent concept |
+| **`/retail/`** ([`retail/index.html`](retail/index.html)) | **Retail & ecosystem** — wallets, bridges, explorer, dApps, activation KPIs |
+
+Headers link across the two experiences so they are never mixed in one scroll. Optional hub (two cards) can be added later; today cross-navigation is enough.
+
 ## Stack
 
 | Piece | Role |

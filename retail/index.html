@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rootstock CLI Agent — Retail &amp; ecosystem · Wake Up Labs</title>
+    <meta
+      name="description"
+      content="Rootstock CLI Agent for retail and ecosystem users — guided paths to wallets, bridges, explorer, and dApps on Rootstock. Activation-focused, inspect-first, by Wake Up Labs."
+    />
+    <script>
+      (function () {
+        var t = null;
+        try {
+          t = localStorage.getItem("rootstock-theme");
+        } catch (e) {}
+        if (t !== "light" && t !== "dark") {
+          t = "light";
+        }
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <link rel="preconnect" href="https://www.rootstocklabs.com" crossorigin />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand" lang="en">Rootstock CLI Agent <span class="brand__x">x</span> Wake Up Labs</div>
+        <div class="nav-actions">
+          <nav class="nav-audience" aria-label="Audience">
+            <a class="nav-audience__link" href="./" aria-current="page">Retail &amp; ecosystem</a>
+            <span class="nav-audience__sep" aria-hidden="true">·</span>
+            <a class="nav-audience__link" href="../">Institutional</a>
+          </nav>
+          <div
+            class="theme-toggle"
+            role="group"
+            aria-label="Color theme"
+          >
+            <button
+              type="button"
+              class="theme-toggle__btn is-active"
+              id="theme-day"
+              aria-pressed="true"
+            >
+              Day
+            </button>
+            <button
+              type="button"
+              class="theme-toggle__btn"
+              id="theme-night"
+              aria-pressed="false"
+            >
+              Night
+            </button>
+          </div>
+          <a
+            class="btn btn-secondary btn-nav"
+            href="https://zcal.co/wakeuplabs"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Talk to Wake Up Labs</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Retail &amp; ecosystem · wallets, bridges, explorer, dApps</p>
+            <h1>
+              From curiosity to your first useful move on Rootstock.<br />
+              <span class="h1-sub">Less guesswork. Clear next steps.</span>
+            </h1>
+            <p class="lead">
+              A CLI-shaped agent concept for everyday users and builders: inspect the network,
+              compare bridge ideas safely, read explorers, and discover dApps—without pretending to
+              replace your wallet or your own research.
+            </p>
+            <div class="actions">
+              <a
+                class="btn btn-primary"
+                href="https://zcal.co/wakeuplabs"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Talk to Wake Up Labs</a>
+              <a class="btn btn-secondary" href="#scenarios">See concrete scenarios</a>
+            </div>
+            <p class="proof">
+              Designed for activation metrics (D1 / D7), not institutional AUM. Commands on this
+              page are illustrative. Not financial advice.
+            </p>
+          </div>
+          <div class="hero-visual">
+            <figure class="terminal-card" aria-label="Illustrative CLI snippet">
+              <div class="terminal-card__bar">
+                <span class="terminal-card__dots" aria-hidden="true"></span>
+                <span class="terminal-card__title">rootstock-cli</span>
+                <button type="button" class="terminal-card__copy" data-copy-for="retail-hero">
+                  Copy
+                </button>
+              </div>
+              <div
+                class="terminal-card__body"
+                contenteditable="true"
+                spellcheck="false"
+                data-terminal-body="retail-hero"
+                role="textbox"
+                aria-multiline="true"
+                aria-label="Editable CLI example. Edits are saved in this browser."
+              ># Illustrative — retail & ecosystem (proposal)
+rootstock explore session start --mode read-only
+rootstock net status
+# OK Rootstock mainnet — see docs for chain metadata
+rootstock bridge routes list --inspect-only
+rootstock explorer open --last-tx
+rootstock dapp suggest --goal "earn yield" --style conservative</div>
+            </figure>
+            <p class="terminal-note">
+              Illustrative commands for a proposal demo. Edit the snippet — your changes are saved
+              in this browser.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2>Why Rootstock can feel hard for retail users</h2>
+          <p class="section-lead">
+            Smaller networks do not have the same default mindshare as major L1s. Users stall on
+            basics: the right chain, where liquidity enters, and which dApps match a simple goal.
+          </p>
+          <ul class="grid-list">
+            <li>Chain IDs, RPCs, and bridges are easy to get wrong on the first try.</li>
+            <li>Explorers and tx status are powerful but unfriendly without a guide.</li>
+            <li>dApp discovery is fragmented; “what should I do here?” has no single answer.</li>
+            <li>After one successful tx, many users never return—there is no light lifecycle loop.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section alt">
+        <div class="container">
+          <h2>A CLI agent pattern for activation, not paperwork</h2>
+          <p class="section-lead">
+            Same surface as the institutional concept—commands you can read, copy, and inspect—but
+            tuned for individuals exploring the Rootstock ecosystem.
+          </p>
+          <div class="cards">
+            <article class="card">
+              <h3>Onboard</h3>
+              <p>Plain-language network context, wallet readiness, and “do not send yet” guardrails.</p>
+            </article>
+            <article class="card">
+              <h3>Bridge &amp; enter</h3>
+              <p>Inspect-only route summaries and links to official bridges and docs—not trade advice.</p>
+            </article>
+            <article class="card">
+              <h3>Explorer</h3>
+              <p>Turn hashes and addresses into short human summaries plus deep links.</p>
+            </article>
+            <article class="card">
+              <h3>dApp map</h3>
+              <p>Match a goal to starter destinations; user stays responsible for approvals.</p>
+            </article>
+            <article class="card">
+              <h3>Fix &amp; unblock</h3>
+              <p>Common failure patterns: wrong network, pending tx, basic fee questions.</p>
+            </article>
+            <article class="card">
+              <h3>Come back</h3>
+              <p>Optional nudges to finish a flow or try a second action (opt-in retail lifecycle).</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scenarios" id="scenarios">
+        <div class="container">
+          <p class="section-kicker">Concrete scenarios</p>
+          <h2>Retail journeys: situation, agent, impact</h2>
+          <p class="section-lead">
+            Each row ties a typical friction point to what the agent would do in practice and the
+            activation outcome you can measure—distinct from institutional vault KPIs.
+          </p>
+          <ul class="scenario-cards">
+            <li class="scenario-card">
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Situation</p>
+                <p class="scenario-card__text">
+                  A user hears “Bitcoin-aligned L2” but does not know how to land on the correct
+                  network or safe first step.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Agent in practice</p>
+                <p class="scenario-card__text">
+                  Starts a read-only session, confirms chain context, surfaces official docs and
+                  explorer entry points before any funds move.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Impact</p>
+                <p class="scenario-card__text">
+                  Higher D1 completion of a defined “first win” (e.g. verified network + read-only
+                  success path) without unsafe transfers.
+                </p>
+              </div>
+            </li>
+            <li class="scenario-card">
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Situation</p>
+                <p class="scenario-card__text">
+                  User wants liquidity on Rootstock but is overwhelmed by bridge options and risks.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Agent in practice</p>
+                <p class="scenario-card__text">
+                  Runs inspect-only bridge summaries, security checklist, and deep links—no ranking
+                  as investment advice.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Impact</p>
+                <p class="scenario-card__text">
+                  More users reach an informed bridge attempt or official on-ramp flow; fewer
+                  abandoned sessions at the education stage.
+                </p>
+              </div>
+            </li>
+            <li class="scenario-card">
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Situation</p>
+                <p class="scenario-card__text">
+                  User pasted a tx hash and cannot interpret explorer output or errors.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Agent in practice</p>
+                <p class="scenario-card__text">
+                  Summarizes status, suggests likely causes (wrong chain, nonce, gas), links back to
+                  explorer views.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Impact</p>
+                <p class="scenario-card__text">
+                  Lower support load in community channels; faster self-serve resolution for common
+                  cases.
+                </p>
+              </div>
+            </li>
+            <li class="scenario-card">
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Situation</p>
+                <p class="scenario-card__text">
+                  User completed one swap or deposit and never returned—no gentle, opt-in follow-up.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Agent in practice</p>
+                <p class="scenario-card__text">
+                  Configures light lifecycle prompts (thresholds, reminders) scoped to retail
+                  comfort and explicit consent.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Impact</p>
+                <p class="scenario-card__text">
+                  Improved D7 return rate and second meaningful action—not one-off tourism.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section launch" id="flows">
+        <div class="container">
+          <p class="section-kicker">Example flow</p>
+          <h2>Read-only session, then inspect bridges</h2>
+          <p class="section-lead">
+            Two compact steps that show how retail copy stays inspect-first—mirroring the
+            institutional pattern without shared wording.
+          </p>
+          <ol class="steps">
+            <li class="steps__item">
+              <div class="steps__num">1</div>
+              <div class="steps__content">
+                <h3>Open a safe session</h3>
+                <p>
+                  Confirm read-only mode, chain metadata, and where to read official Rootstock
+                  documentation.
+                </p>
+                <figure class="terminal-card terminal-card--compact" aria-label="Step 1 CLI">
+                  <div class="terminal-card__bar">
+                    <span class="terminal-card__title">step 1</span>
+                    <button type="button" class="terminal-card__copy" data-copy-for="retail-flow-1">
+                      Copy
+                    </button>
+                  </div>
+                  <div
+                    class="terminal-card__body"
+                    contenteditable="true"
+                    spellcheck="false"
+                    data-terminal-body="retail-flow-1"
+                    role="textbox"
+                    aria-multiline="true"
+                  >rootstock explore session start --mode read-only
+rootstock net status
+# OK Docs: https://dev.rootstock.io — verify chain before funding</div>
+                </figure>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div class="steps__num">2</div>
+              <div class="steps__content">
+                <h3>Inspect bridges, then decide</h3>
+                <p>
+                  List conceptual routes and risks; user chooses off-chain / in-wallet; no automatic
+                  sends from the agent in this proposal sketch.
+                </p>
+                <figure class="terminal-card terminal-card--compact" aria-label="Step 2 CLI">
+                  <div class="terminal-card__bar">
+                    <span class="terminal-card__title">step 2</span>
+                    <button type="button" class="terminal-card__copy" data-copy-for="retail-flow-2">
+                      Copy
+                    </button>
+                  </div>
+                  <div
+                    class="terminal-card__body"
+                    contenteditable="true"
+                    spellcheck="false"
+                    data-terminal-body="retail-flow-2"
+                    role="textbox"
+                    aria-multiline="true"
+                  >rootstock bridge routes list --inspect-only
+rootstock policy explain --topic bridge_risk
+# Review checkpoints before signing anything in your wallet</div>
+                </figure>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section alt" id="multi-agent">
+        <div class="container">
+          <p class="section-kicker">Architecture note</p>
+          <h2>Multi-agent orchestration (future-facing)</h2>
+          <p class="section-lead">
+            A Rootstock “guide” agent does not need to own every skill. It can delegate to
+            specialists—bridge explainer, wallet safety, dApp-specific copilots—behind one CLI or chat
+            surface. Policies and user consent still apply at the edges.
+          </p>
+          <pre class="diagram" aria-label="Multi-agent diagram">User
+  |
+  v
++-------------------+
+| RootstockGuide    |  session, routing, consent
+| Agent (CLI/chat)  |
++---------+---------+
+          |
+ +-----+-----+-----+
+    v           v     v
++--------+ +--------+ +--------+
+| Bridge | | Wallet | | dApp   |
+| Helper | | Safety | | Helper |
+| Agent  | | Agent  | | Agent  |
++--------+ +--------+ +--------+
+    |           |          |
+    +-----------+----------+
+                v
+     Official docs, explorer,
+ partner UIs (no custody)</pre>
+        </div>
+      </section>
+
+      <section class="section" id="commands">
+        <div class="container">
+          <p class="section-kicker">Command surface</p>
+          <h2>Illustrative retail commands (inspect vs execute)</h2>
+          <p class="section-lead">
+            Same pattern as the institutional page: separate inspection from actions that move
+            funds. Production would harden approvals and telemetry.
+          </p>
+          <ul class="command-list">
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock explore session start</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Open a guided session with mode (read-only vs interactive) and safety preamble.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock net status</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Show chain metadata, RPC health hints, and links to official references.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock bridge routes list</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Summarize entry paths with risk notes—never personalized investment advice.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock explorer tx</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Explain a transaction hash or address in short form with explorer deep links.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock dapp suggest</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <span class="command-list__desc"
+                >Map a plain goal to starter dApp categories; user confirms every on-chain step.</span
+              >
+            </li>
+            <li class="command-list__row">
+              <code class="command-list__cmd">rootstock lifecycle remind</code>
+              <span class="command-list__badge command-list__badge--execute">Execute</span>
+              <span class="command-list__desc"
+                >Opt-in reminders to finish a flow or revisit a second action (retail lifecycle).</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section alt" id="pilot">
+        <div class="container">
+          <h2>Measure retail activation, not institutional AUM</h2>
+          <p class="section-lead">
+            A discovery sprint with Wake Up Labs can define D1 / D7 wins, command catalog, and
+            ecosystem link policy—parallel to, but separate from, institutional pilots.
+          </p>
+          <ul class="kpis">
+            <li>D1 “first win” completion (read-only path, bridge checklist, or first successful read)</li>
+            <li>D7 return and second meaningful action rate</li>
+            <li>Bridge / on-ramp education funnel completion (non-advisory)</li>
+            <li>dApp discovery click-through by category</li>
+            <li>Support-ticket themes deflected by guided flows (where measurable)</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section build" id="build">
+        <div class="container build-grid">
+          <div class="build-copy">
+            <p class="section-kicker">Build with Wake Up Labs</p>
+            <h2>Retail CLI agent concepts for Rootstock Labs Institutional Services</h2>
+            <p class="section-lead">
+              Partner with Wake Up Labs to explore ecosystem-wide activation: commands, guardrails,
+              and partner-friendly surfaces—without mixing retail copy into institutional pages.
+            </p>
+            <ul class="build-bullets">
+              <li>Teams growing Rootstock daily active users and repeat on-chain actions.</li>
+              <li>Ecosystem programs that need one guided front door to bridges, explorer, and dApps.</li>
+              <li>Partners who want a consistent, policy-aware CLI pattern across audiences.</li>
+            </ul>
+          </div>
+          <div class="build-form-wrap">
+            <form
+              id="contact-form"
+              class="contact-form"
+              novalidate
+              data-contact-subject="Rootstock CLI Agent — Retail &amp; ecosystem inquiry"
+            >
+              <label class="field">
+                <span class="field__label">Name</span>
+                <input class="field__input" type="text" name="name" autocomplete="name" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" autocomplete="email" required />
+              </label>
+              <label class="field">
+                <span class="field__label">I am a…</span>
+                <select class="field__input" name="role" required>
+                  <option value="">Select…</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Community">Community / user</option>
+                  <option value="Ecosystem">Ecosystem / partner</option>
+                  <option value="Business">Business</option>
+                </select>
+              </label>
+              <label class="field">
+                <span class="field__label">Message (optional)</span>
+                <textarea class="field__input field__textarea" name="message" rows="4"></textarea>
+              </label>
+              <button type="submit" class="btn btn-primary btn-block">Talk to the team</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="cta" class="section cta">
+        <div class="container">
+          <h2>One ecosystem, two clear front doors.</h2>
+          <p>
+            Institutional and retail users should not share the same funnel narrative. This page is
+            the retail &amp; ecosystem entry; use it when activation and education—not vault
+            paperwork—are the goal.
+          </p>
+          <a
+            class="btn btn-primary"
+            href="https://zcal.co/wakeuplabs"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Talk to Wake Up Labs</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-logos" aria-label="Wake Up Labs and Rootstock Labs">
+        <div class="container footer-logos__inner">
+          <a
+            class="footer-logo-link"
+            href="https://www.wakeuplabs.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="footer-logo footer-logo--wul"
+              src="https://www.wakeuplabs.io/images/logo-wakeup-labs-white.png"
+              alt="Wake Up Labs"
+              width="180"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
+          <a
+            class="footer-logo-link"
+            href="https://www.rootstocklabs.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="footer-logo footer-logo--rs"
+              src="https://www.rootstocklabs.com/icons/icon-192x192.png"
+              alt="Rootstock Labs"
+              width="48"
+              height="48"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="footer-logo-wordmark" aria-hidden="true">Rootstock Labs</span>
+          </a>
+        </div>
+      </div>
+      <div class="container footer-inner">
+        <p class="footer-note">
+          Retail &amp; ecosystem proposal by Wake Up Labs. Not financial advice. Commands and
+          outputs shown here are illustrative unless otherwise agreed with Rootstock Labs.
+        </p>
+      </div>
+    </footer>
+
+    <script src="../app.js" defer></script>
+  </body>
+</html>

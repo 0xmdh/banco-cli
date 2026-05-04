@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banco CLI × Wake Up Labs · Propuesta para bancos</title>
+    <title>Agentes de IA para bancos · Banco CLI × Wake Up Labs</title>
     <meta
       name="description"
-      content="Wake Up Labs: agente CLI consciente de políticas para acelerar banca digital con personas y operaciones con empresas, bajo el marco de cada banco."
+      content="Wake Up Labs: agentes de IA alineados a las políticas del banco para acelerar banca digital con personas y operaciones con empresas. Incluye capa técnica CLI para integración y auditoría."
     />
     <script>
       (function () {
@@ -25,12 +25,17 @@
   <body>
     <header class="site-header">
       <div class="container nav">
-        <div class="brand" lang="es">Banco CLI <span class="brand__x">×</span> Wake Up Labs</div>
+        <div class="brand" lang="es">
+          <span class="brand__title">Banco CLI <span class="brand__x">×</span> Wake Up Labs</span>
+          <span class="brand__tagline">Agentes de IA para canal personas y empresas</span>
+        </div>
         <div class="nav-actions">
           <nav class="nav-audience" aria-label="Secciones">
             <a class="nav-audience__link" href="#personas">Personas</a>
             <span class="nav-audience__sep" aria-hidden="true">/</span>
             <a class="nav-audience__link" href="#empresas">Empresas</a>
+            <span class="nav-audience__sep" aria-hidden="true">/</span>
+            <a class="nav-audience__link" href="#tecnico-cli">Técnico</a>
           </nav>
           <div
             class="theme-toggle"
@@ -66,39 +71,98 @@
 
     <main>
       <section class="hero">
-        <div class="container hero-grid">
-          <div class="hero-copy">
-            <p class="eyebrow">Propuesta para bancos · personas y empresas (B2B)</p>
-            <h1>
-              Del intento en el canal digital a la operación concreta.<br />
-              <span class="h1-sub">Más conversión en personas. Menos fricción en empresas.</span>
-            </h1>
-            <p class="lead">
-              Un agente en formato CLI, alineado a las políticas internas del banco, que guía
-              equipos y clientes desde la calificación hasta la primera acción útil en banca
-              digital, sostiene recurrencia con flujos de lifecycle auditables y encaja en
-              pilotos de nuevos productos o integraciones respetando gobierno y aprobaciones.
-            </p>
-            <div class="actions">
-              <a
-                class="btn btn-primary"
-                href="https://zcal.co/wakeuplabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Agendar llamada</a>
-              <a class="btn btn-secondary" href="#piloto">Ver alcance del piloto</a>
+        <div class="container">
+          <div class="hero-band">
+            <div class="audience-row">
+              <span class="audience-label">Pensado para equipos de</span>
+              <ul class="audience-chips" aria-label="Áreas del banco">
+                <li><span class="audience-chip">Banca digital y personas</span></li>
+                <li><span class="audience-chip">Empresas y tesorería cliente</span></li>
+                <li><span class="audience-chip">Operaciones y producto</span></li>
+                <li><span class="audience-chip">Riesgos y compliance</span></li>
+                <li><span class="audience-chip">Tecnología</span></li>
+              </ul>
             </div>
-            <p class="proof">
-              Pensado para medir impacto en negocio: menos abandono en onboarding, más
-              segunda acción en app y home banking, y ciclos más cortos en altas y operaciones
-              con empresas, sin reemplazar el core ni saltear gobierno de riesgos y compliance.
-            </p>
           </div>
-          <div class="hero-visual">
-            <figure class="terminal-card" aria-label="Fragmento CLI ilustrativo">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Propuesta para bancos · IA y agentes en el canal</p>
+              <h1>
+                Agentes de IA que llevan del intento a la operación en el canal.<br />
+                <span class="h1-sub">Personas y empresas, con políticas del banco y trazabilidad.</span>
+              </h1>
+              <p class="lead">
+                Un orquestador de agentes alineado a las políticas internas: guía a clientes y
+                equipos internos, coordina el diálogo persona-agente y agente-sistemas, y deja
+                registro para auditoría. La misma idea encaja en la conversación que ya conocen
+                las mesas directivas: más IA en operaciones, sin reemplazar el core ni saltear
+                gobierno de riesgos y compliance.
+              </p>
+              <div class="actions">
+                <a
+                  class="btn btn-primary"
+                  href="https://zcal.co/wakeuplabs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Agendar llamada</a>
+                <a class="btn btn-secondary" href="#piloto">Ver alcance del piloto</a>
+              </div>
+              <p class="proof">
+                Métricas de negocio: menos abandono en onboarding, más segunda acción en app y
+                home banking, y ciclos más cortos en altas y operaciones con empresas.
+              </p>
+              <div class="hero-segments">
+                <a class="segment-card" href="#personas">
+                  <span class="segment-card__icon" aria-hidden="true">◎</span>
+                  <span class="segment-card__title">Personas y retail</span>
+                  <span class="segment-card__hint">Activación, onboarding y segunda acción en canal digital.</span>
+                </a>
+                <a class="segment-card" href="#empresas">
+                  <span class="segment-card__icon" aria-hidden="true">▢</span>
+                  <span class="segment-card__title">Empresas y B2B</span>
+                  <span class="segment-card__hint">Alta, tesorería cliente y menos fricción entre áreas.</span>
+                </a>
+              </div>
+            </div>
+            <div class="hero-diagram-wrap">
+              <figure class="bank-flow-diagram" aria-labelledby="hero-flow-title">
+                <figcaption id="hero-flow-title" class="visually-hidden">
+                  Esquema: clientes personas, agente de inteligencia artificial del banco, y clientes empresas conectados por el canal.
+                </figcaption>
+                <div class="bank-flow-diagram__cols">
+                  <div class="bank-flow-node">
+                    <span class="bank-flow-node__icon" aria-hidden="true">◎</span>
+                    <span class="bank-flow-node__label">Personas</span>
+                    <span class="bank-flow-node__hint">App y banca digital</span>
+                  </div>
+                  <div class="bank-flow-arrows" aria-hidden="true">↔</div>
+                  <div class="bank-flow-node bank-flow-node--hub">
+                    <span class="bank-flow-node__icon" aria-hidden="true">◇</span>
+                    <span class="bank-flow-hub__title">Capa de agentes de IA</span>
+                    <span class="bank-flow-hub__sub">Orquestación, políticas y próximo paso claro para humanos y sistemas.</span>
+                  </div>
+                  <div class="bank-flow-arrows" aria-hidden="true">↔</div>
+                  <div class="bank-flow-node">
+                    <span class="bank-flow-node__icon" aria-hidden="true">▢</span>
+                    <span class="bank-flow-node__label">Empresas</span>
+                    <span class="bank-flow-node__hint">Mesa comercial y operaciones</span>
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </div>
+          <div class="hero-terminal-row" id="tecnico-cli">
+            <p class="hero-tech-kicker">Capa técnica para equipos de integración</p>
+            <p class="hero-tech-lead">
+              Quien ya opera con consolas o APIs puede usar la misma lógica en formato
+              <strong>CLI</strong> (línea de comandos): inspección antes de ejecutar, scripts,
+              pipelines y trazas para TI. El decision maker no necesita usarla: basta con saber
+              que existe para gobierno y despliegue ordenado.
+            </p>
+            <figure class="terminal-card" aria-label="Fragmento de consola ilustrativo">
               <div class="terminal-card__bar">
                 <span class="terminal-card__dots" aria-hidden="true"></span>
-                <span class="terminal-card__title">banco-cli</span>
+                <span class="terminal-card__title">banco-cli · ejemplo técnico</span>
                 <button type="button" class="terminal-card__copy" data-copy-for="hero">
                   Copiar
                 </button>
@@ -110,7 +174,7 @@
                 data-terminal-body="hero"
                 role="textbox"
                 aria-multiline="true"
-                aria-label="Ejemplo CLI editable. Los cambios se guardan en este navegador."
+                aria-label="Ejemplo de consola editable. Los cambios se guardan en este navegador."
               ># Comandos ilustrativos, demo de propuesta
 curl -fsSL https://example.bank/cli | sh
 banco session start --unidad "Personas_y_Empresas"
@@ -119,8 +183,8 @@ banco session start --unidad "Personas_y_Empresas"
 # Listo para flujos guiados bajo mandato del banco</div>
             </figure>
             <p class="terminal-note">
-              Comandos ilustrativos para una demo de propuesta. Podés editar el fragmento; los
-              cambios quedan guardados en este navegador.
+              Ilustración para equipos técnicos. Podés editar el fragmento; los cambios quedan
+              guardados en este navegador.
             </p>
           </div>
         </div>
@@ -151,10 +215,9 @@ banco session start --unidad "Personas_y_Empresas"
           <p class="section-kicker">Banca personas · retail</p>
           <h2>Activar el canal digital sin sumar ruido al cliente</h2>
           <p class="section-lead">
-            El agente combina guía conversacional, acciones invocadas por comando y controles
-            conscientes de políticas para mover al cliente (y al equipo interno) desde el
-            interés hasta la primera acción en app o home banking y después hacia una segunda
-            acción medible.
+            El agente combina guía conversacional, acciones guiadas y controles conscientes de
+            políticas para mover al cliente (y al equipo interno) desde el interés hasta la
+            primera acción en app o home banking y después hacia una segunda acción medible.
           </p>
           <div class="cards">
             <article class="card">
@@ -187,9 +250,9 @@ banco session start --unidad "Personas_y_Empresas"
           <p class="section-kicker">Empresas · B2B y tesorería cliente</p>
           <h2>Menos ida y vuelta entre comercial, operaciones y la empresa</h2>
           <p class="section-lead">
-            Misma superficie de comandos e inspección, pero con contexto de mandato B2B: roles,
-            firmas, límites y productos habilitados. El agente no reemplaza al oficial de cuenta;
-            ordena el recorrido y deja registro de qué falta para avanzar.
+            Misma capa de agentes e inspección, con contexto de mandato B2B: roles, firmas,
+            límites y productos habilitados. El agente no reemplaza al oficial de cuenta; ordena
+            el recorrido y deja registro de qué falta para avanzar.
           </p>
           <div class="cards">
             <article class="card">
@@ -224,8 +287,7 @@ banco session start --unidad "Personas_y_Empresas"
           <p class="section-lead">
             Cada fila es un patrón típico de fricción en un banco: qué pasa hoy, qué
             haría el agente en la práctica, y qué resultado de embudo o operación un piloto
-            podría medir, siempre sobre la misma superficie de inspección y ejecución de esta
-            propuesta.
+            podría medir, siempre sobre la misma capa de agentes e inspección de esta propuesta.
           </p>
           <ul class="scenario-cards">
             <li class="scenario-card">
@@ -313,9 +375,9 @@ banco session start --unidad "Personas_y_Empresas"
               <div class="scenario-card__cell">
                 <p class="scenario-card__label">Agente en la práctica</p>
                 <p class="scenario-card__text">
-                  Misma superficie de comandos para equipos técnicos y de negocio: inspección
-                  primero, ejecución después, con explicación de permitido, bloqueado o aprobación
-                  humana, por ejemplo en un piloto acotado con dual control.
+                  Misma capa de agentes para equipos técnicos y de negocio: inspección primero,
+                  ejecución después, con explicación de permitido, bloqueado o aprobación humana,
+                  por ejemplo en un piloto acotado con dual control.
                 </p>
               </div>
               <div class="scenario-card__cell">
@@ -348,7 +410,7 @@ banco session start --unidad "Personas_y_Empresas"
                   Perfil de organización, roles y permisos para que el agente opere solo dentro
                   de los límites que el banco define.
                 </p>
-                <figure class="terminal-card terminal-card--compact" aria-label="CLI paso 1">
+                <figure class="terminal-card terminal-card--compact" aria-label="Ejemplo técnico paso 1">
                   <div class="terminal-card__bar">
                     <span class="terminal-card__title">paso 1</span>
                     <button type="button" class="terminal-card__copy" data-copy-for="flow-1">
@@ -376,7 +438,7 @@ banco session start --unidad "Personas_y_Empresas"
                   Correr chequeos y obtener un sí / no / pendiente claro, con el siguiente paso
                   operativo listo para quien decida.
                 </p>
-                <figure class="terminal-card terminal-card--compact" aria-label="CLI paso 2">
+                <figure class="terminal-card terminal-card--compact" aria-label="Ejemplo técnico paso 2">
                   <div class="terminal-card__bar">
                     <span class="terminal-card__title">paso 2</span>
                     <button type="button" class="terminal-card__copy" data-copy-for="flow-2">
@@ -405,7 +467,7 @@ banco session start --unidad "Personas_y_Empresas"
                   Dejar armados los planes de acción detrás de aprobaciones, y encender
                   monitoreo y notificaciones alineadas a reglas del banco.
                 </p>
-                <figure class="terminal-card terminal-card--compact" aria-label="CLI paso 3">
+                <figure class="terminal-card terminal-card--compact" aria-label="Ejemplo técnico paso 3">
                   <div class="terminal-card__bar">
                     <span class="terminal-card__title">paso 3</span>
                     <button type="button" class="terminal-card__copy" data-copy-for="flow-3">
@@ -466,7 +528,7 @@ banco lifecycle notify --regla segunda_accion --cadencia acordada</div>
 
       <section class="section agentic">
         <div class="container">
-          <p class="section-kicker">Arquitectura de flujo</p>
+          <p class="section-kicker">Arquitectura de agentes</p>
           <h2>Una capa orquestable desde la intención hasta la operación en canal</h2>
           <p class="section-lead">
             La topología refleja cómo trabajan los bancos: primero política y aprobaciones, luego
@@ -485,7 +547,7 @@ banco lifecycle notify --regla segunda_accion --cadencia acordada</div>
                 </button>
               </div>
               <pre class="topology-pre" id="topology-block" aria-label="Topología de flujo">Mesa del banco (Personas + Empresas)
-+-- Banco CLI
++-- Capa de agentes de IA
 |   +-- Políticas y aprobaciones
 |   +-- Canales digitales y operación
 |   +-- Producto / comercial (contexto)
@@ -531,8 +593,8 @@ banco lifecycle notify --regla segunda_accion --cadencia acordada</div>
           <pre class="diagram" aria-label="Arquitectura de alto nivel">
 Equipo del banco (Personas / Empresas / Tecnología)
    |
-Banco CLI
-   |-- Capa de política y aprobaciones
+Capa de agentes de IA
+   |-- Política y aprobaciones
    |-- Canales digitales y operación
    |-- Productos y partners (piloto acotado)
    `-- Motor de notificaciones y lifecycle
@@ -560,12 +622,13 @@ Banco CLI
 
       <section class="section commands alt" id="comandos">
         <div class="container">
-          <p class="section-kicker">Superficie de comandos</p>
+          <p class="section-kicker">Superficie técnica · CLI (opcional para TI)</p>
           <h2>Comandos programables para operar el embudo con trazabilidad</h2>
           <p class="section-lead">
-            Inspeccionar antes de ejecutar. En producción, cada camino crítico puede exigir
-            aprobaciones explícitas y registro para auditoría interna y reguladores, según diseño
-            del banco.
+            Para equipos que integran o auditan: inspeccionar antes de ejecutar, exponer la misma
+            lógica de agentes en scripts o pipelines. En producción, cada camino crítico puede
+            exigir aprobaciones explícitas y registro para auditoría interna y reguladores, según
+            diseño del banco.
           </p>
           <ul class="command-list">
             <li class="command-list__row">
@@ -645,7 +708,7 @@ Banco CLI
           <div class="build-copy">
             <p class="section-kicker">Construir con nosotros</p>
             <h2>
-              Wake Up Labs como socio de implementación de flujos con agente para tu banco
+              Wake Up Labs como socio para desplegar agentes de IA y flujos de canal en tu banco
             </h2>
             <p class="section-lead">
               Contanos en qué etapa del embudo se caen hoy las conversiones, cómo funcionan las
@@ -700,10 +763,10 @@ Banco CLI
           <h2>El embudo digital necesita un operador, no solo un PDF.</h2>
           <p>
             Si el objetivo es que más clientes personas y empresas completen operaciones útiles en
-            el canal y evaluar con rigor un piloto con KPIs claros, podemos traer a la
-            reunión flujos ilustrativos, marco de métricas y roadmap de implementación. La ejecución
-            del piloto la entrega Wake Up Labs bajo contrato; no construimos pilotos completos
-            antes de un acuerdo comercial.
+            el canal, y evaluar con rigor un piloto con agentes de IA y KPIs claros, podemos traer
+            a la reunión flujos ilustrativos, marco de métricas y roadmap de implementación. La
+            ejecución del piloto la entrega Wake Up Labs bajo contrato; no construimos pilotos
+            completos antes de un acuerdo comercial.
           </p>
           <a
             class="btn btn-primary"

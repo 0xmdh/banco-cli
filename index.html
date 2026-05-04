@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rootstock CLI Agent x Wake Up Labs</title>
+    <title>Banco CLI × Wake Up Labs · Propuesta para bancos</title>
     <meta
       name="description"
-      content="Rootstock CLI Agent x Wake Up Labs — turn institutional intent into funded vault positions with a policy-aware CLI agent for onboarding and vault flows."
+      content="Wake Up Labs: agente CLI consciente de políticas para acelerar banca digital con personas y operaciones con empresas, bajo el marco de cada banco."
     />
     <script>
       (function () {
         var t = null;
         try {
-          t = localStorage.getItem("rootstock-theme");
+          t = localStorage.getItem("banco-cli-theme");
         } catch (e) {}
         if (t !== "light" && t !== "dark") {
           t = "light";
@@ -20,23 +20,22 @@
         document.documentElement.setAttribute("data-theme", t);
       })();
     </script>
-    <link rel="preconnect" href="https://www.rootstocklabs.com" crossorigin />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="site-header">
       <div class="container nav">
-        <div class="brand" lang="en">Rootstock CLI Agent <span class="brand__x">x</span> Wake Up Labs</div>
+        <div class="brand" lang="es">Banco CLI <span class="brand__x">×</span> Wake Up Labs</div>
         <div class="nav-actions">
-          <nav class="nav-audience" aria-label="Audience">
-            <a class="nav-audience__link" href="./" aria-current="page">Institutional</a>
+          <nav class="nav-audience" aria-label="Secciones">
+            <a class="nav-audience__link" href="#personas">Personas</a>
             <span class="nav-audience__sep" aria-hidden="true">/</span>
-            <a class="nav-audience__link" href="./retail/">Retail</a>
+            <a class="nav-audience__link" href="#empresas">Empresas</a>
           </nav>
           <div
             class="theme-toggle"
             role="group"
-            aria-label="Color theme"
+            aria-label="Tema de color"
           >
             <button
               type="button"
@@ -44,7 +43,7 @@
               id="theme-day"
               aria-pressed="true"
             >
-              Day
+              Día
             </button>
             <button
               type="button"
@@ -52,7 +51,7 @@
               id="theme-night"
               aria-pressed="false"
             >
-              Night
+              Noche
             </button>
           </div>
           <a
@@ -60,24 +59,25 @@
             href="https://zcal.co/wakeuplabs"
             target="_blank"
             rel="noopener noreferrer"
-            >Book strategy call</a>
+            >Agendar llamada</a>
         </div>
       </div>
     </header>
 
     <main>
-      <!-- Hero: two columns + interactive terminal -->
       <section class="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Institutional funnel acceleration for Bitcoin DeFi</p>
+            <p class="eyebrow">Propuesta para bancos · personas y empresas (B2B)</p>
             <h1>
-              From institutional intent to funded vaults.<br />
-              <span class="h1-sub">Faster conversion. Stronger AUM.</span>
+              Del intento en el canal digital a la operación concreta.<br />
+              <span class="h1-sub">Más conversión en personas. Menos fricción en empresas.</span>
             </h1>
             <p class="lead">
-              A policy-aware CLI Agent that guides institutions from qualification to first BTC/USD
-              vault allocation, then drives repeat deposits with proactive lifecycle workflows.
+              Un agente en formato CLI, alineado a las políticas internas del banco, que guía
+              equipos y clientes desde la calificación hasta la primera acción útil en banca
+              digital, sostiene recurrencia con flujos de lifecycle auditables y encaja en
+              pilotos de nuevos productos o integraciones respetando gobierno y aprobaciones.
             </p>
             <div class="actions">
               <a
@@ -85,21 +85,22 @@
                 href="https://zcal.co/wakeuplabs"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Book strategy call</a>
-              <a class="btn btn-secondary" href="#pilot">See pilot blueprint</a>
+                >Agendar llamada</a>
+              <a class="btn btn-secondary" href="#piloto">Ver alcance del piloto</a>
             </div>
             <p class="proof">
-              Designed for measurable outcomes: lower onboarding friction, faster
-              time-to-first-deposit, and stronger institutional AUM retention.
+              Pensado para medir impacto en negocio: menos abandono en onboarding, más
+              segunda acción en app y home banking, y ciclos más cortos en altas y operaciones
+              con empresas, sin reemplazar el core ni saltear gobierno de riesgos y compliance.
             </p>
           </div>
           <div class="hero-visual">
-            <figure class="terminal-card" aria-label="Illustrative CLI snippet">
+            <figure class="terminal-card" aria-label="Fragmento CLI ilustrativo">
               <div class="terminal-card__bar">
                 <span class="terminal-card__dots" aria-hidden="true"></span>
-                <span class="terminal-card__title">rootstock-cli</span>
+                <span class="terminal-card__title">banco-cli</span>
                 <button type="button" class="terminal-card__copy" data-copy-for="hero">
-                  Copy
+                  Copiar
                 </button>
               </div>
               <div
@@ -109,17 +110,17 @@
                 data-terminal-body="hero"
                 role="textbox"
                 aria-multiline="true"
-                aria-label="Editable CLI example. Edits are saved in this browser."
-              ># Illustrative commands (pilot proposal)
-curl -fsSL https://example.rootstock.dev/cli | sh
-rootstock institutional session start --org "NorthBridge Capital"
-# OK Policy and custody context loaded
-# OK Qualification checklist — vault allocation paths available
-# Ready for institutional vault workflows</div>
+                aria-label="Ejemplo CLI editable. Los cambios se guardan en este navegador."
+              ># Comandos ilustrativos, demo de propuesta
+curl -fsSL https://example.bank/cli | sh
+banco session start --unidad "Personas_y_Empresas"
+# OK Políticas y perfiles de canal cargados
+# OK Rutas: onboarding digital · tesorería cliente · aprobaciones
+# Listo para flujos guiados bajo mandato del banco</div>
             </figure>
             <p class="terminal-note">
-              Illustrative commands for a proposal demo. Edit the snippet — your changes are saved
-              in this browser.
+              Comandos ilustrativos para una demo de propuesta. Podés editar el fragmento; los
+              cambios quedan guardados en este navegador.
             </p>
           </div>
         </div>
@@ -127,152 +128,201 @@ rootstock institutional session start --org "NorthBridge Capital"
 
       <section class="section">
         <div class="container">
-          <h2>Why institutional leads stall before funding</h2>
+          <h2>Por qué se frenan los embudos, en personas y en empresas</h2>
           <p class="section-lead">
-            Institutional intent is strong, but the path to deployment is fragmented across legal
-            checks, custody workflows, bridge decisions, and allocation execution.
+            En retail, la intención está en la app o el sitio, pero el camino hasta la primera
+            operación útil se fragmenta en validaciones, mensajes genéricos y handoffs entre
+            áreas. En B2B, legal, mesa comercial, tesorería del cliente y operaciones siguen
+            hilos distintos antes de habilitar pagos, líneas o nuevos productos. El resultado es
+            el mismo: oportunidad en el canal que no se convierte en actividad contable ni en
+            relación recurrente.
           </p>
           <ul class="grid-list">
-            <li>Multiple teams involved, no single guided workflow.</li>
-            <li>High diligence load before first allocation.</li>
-            <li>Unclear next steps after initial deposit.</li>
-            <li>Lost AUM expansion due to operational friction.</li>
+            <li>Varias áreas internas y canales, sin un flujo guiado único hacia el “siguiente paso”.</li>
+            <li>Alta carga de diligencia antes de la primera operación o habilitación.</li>
+            <li>Poco seguimiento explícito después del primer login o de la primera reunión comercial.</li>
+            <li>Pérdida de recurrencia y de expansión de servicio por fricción operativa, no por falta de demanda.</li>
           </ul>
         </div>
       </section>
 
-      <section class="section alt">
+      <section class="section alt" id="personas">
         <div class="container">
-          <h2>A CLI Agent built for institutional conversion and lifecycle growth</h2>
+          <p class="section-kicker">Banca personas · retail</p>
+          <h2>Activar el canal digital sin sumar ruido al cliente</h2>
           <p class="section-lead">
-            The Rootstock CLI Agent combines conversational guidance, command-based
-            actions, and policy-aware checkpoints to move users from intent to funded
-            participation.
+            El agente combina guía conversacional, acciones invocadas por comando y controles
+            conscientes de políticas para mover al cliente (y al equipo interno) desde el
+            interés hasta la primera acción en app o home banking y después hacia una segunda
+            acción medible.
           </p>
           <div class="cards">
             <article class="card">
-              <h3>Onboard</h3>
-              <p>Guide eligibility, policy constraints, and setup prerequisites.</p>
+              <h3>Onboarding guiado</h3>
+              <p>
+                Elegibilidad, límites del producto y prerequisitos claros antes de que el cliente
+                firme o transfiera.
+              </p>
             </article>
             <article class="card">
-              <h3>Allocate</h3>
-              <p>Provide structured flows for first BTC/USD vault allocation.</p>
+              <h3>Primera acción digital</h3>
+              <p>
+                Flujos estructurados hacia la operación que el banco define como “éxito” en el
+                piloto (ej.: habilitación, asociación de dispositivo, primer pago chico).
+              </p>
             </article>
             <article class="card">
-              <h3>Monitor</h3>
-              <p>Deliver concise, auditable portfolio and vault updates.</p>
-            </article>
-            <article class="card">
-              <h3>Rebalance</h3>
-              <p>Support treasury adjustments based on thresholds and rules.</p>
-            </article>
-            <article class="card">
-              <h3>Notify</h3>
-              <p>Trigger re-deposit and risk prompts to keep AUM active.</p>
+              <h3>Monitoreo para el cliente</h3>
+              <p>
+                Resúmenes breves de estado de trámites y operaciones, con trazabilidad para el
+                banco si hace falta escalar a humano.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section scenarios" id="scenarios">
+      <section class="section" id="empresas">
         <div class="container">
-          <p class="section-kicker">Concrete scenarios</p>
-          <h2>What changes in the room, and what it moves</h2>
+          <p class="section-kicker">Empresas · B2B y tesorería cliente</p>
+          <h2>Menos ida y vuelta entre comercial, operaciones y la empresa</h2>
           <p class="section-lead">
-            Each row is a typical institutional friction pattern: what breaks today, what the agent
-            does in practice, and the funnel or AUM outcome a pilot can measure—mapped to the same
-            inspect / execute command surface in this proposal.
+            Misma superficie de comandos e inspección, pero con contexto de mandato B2B: roles,
+            firmas, límites y productos habilitados. El agente no reemplaza al oficial de cuenta;
+            ordena el recorrido y deja registro de qué falta para avanzar.
+          </p>
+          <div class="cards">
+            <article class="card">
+              <h3>Alta y calificación</h3>
+              <p>
+                Checklists de KYB/KYC operativo, documentación y rutas de aprobación explicadas
+                en lenguaje de mesa.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Habilitación operativa</h3>
+              <p>
+                Pagos, cobros, líneas o canales digitales de empresa con pasos explícitos y
+                puertas de aprobación donde corresponda.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Lifecycle comercial</h3>
+              <p>
+                Recordatorios y siguientes pasos para completar implementaciones, subir límites
+                o activar add-ons, siempre bajo reglas del banco.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section scenarios alt" id="escenarios">
+        <div class="container">
+          <p class="section-kicker">Escenarios concretos</p>
+          <h2>Qué cambia en la sala y qué se puede medir</h2>
+          <p class="section-lead">
+            Cada fila es un patrón típico de fricción en un banco: qué pasa hoy, qué
+            haría el agente en la práctica, y qué resultado de embudo o operación un piloto
+            podría medir, siempre sobre la misma superficie de inspección y ejecución de esta
+            propuesta.
           </p>
           <ul class="scenario-cards">
             <li class="scenario-card">
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Situation</p>
+                <p class="scenario-card__label">Situación · personas</p>
                 <p class="scenario-card__text">
-                  Legal, treasury, and ops chase different threads; qualification stalls before anyone
-                  commits to a vault path.
+                  El cliente descarga la app o entra al home banking y se pierde entre
+                  validaciones, términos y opciones; abandona antes de completar la primera acción
+                  que el banco considera clave.
                 </p>
               </div>
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Agent in practice</p>
+                <p class="scenario-card__label">Agente en la práctica</p>
                 <p class="scenario-card__text">
-                  Runs structured eligibility and policy checks, explains allow / block / approval
-                  paths, and surfaces the next operational step for decision-makers.
+                  Ejecuta controles de elegibilidad y políticas del producto, explica en qué estado
+                  está el trámite y cuál es el único siguiente paso operativo para el cliente o
+                  para el agente interno.
                 </p>
               </div>
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Impact</p>
+                <p class="scenario-card__label">Impacto</p>
                 <p class="scenario-card__text">
-                  Higher lead-to-qualified and qualified-to-onboarded conversion; shorter cycle time
-                  from first conversation to a clear go / no-go.
-                </p>
-              </div>
-            </li>
-            <li class="scenario-card">
-              <div class="scenario-card__cell">
-                <p class="scenario-card__label">Situation</p>
-                <p class="scenario-card__text">
-                  Heavy diligence load and fragmented custody / bridge context slow the first BTC or
-                  USD vault allocation.
-                </p>
-              </div>
-              <div class="scenario-card__cell">
-                <p class="scenario-card__label">Agent in practice</p>
-                <p class="scenario-card__text">
-                  Holds session and role context, recommends vault pathways for the mandate, and
-                  drafts allocation plans with explicit approval gates and an audit-friendly trail.
-                </p>
-              </div>
-              <div class="scenario-card__cell">
-                <p class="scenario-card__label">Impact</p>
-                <p class="scenario-card__text">
-                  Faster time-to-first-deposit; fewer drop-offs between “approved in principle” and
-                  funded position.
+                  Mayor conversión de “intención en canal” a primera acción completada; menos
+                  llamadas repetitivas al contact center por “no sé qué me falta”.
                 </p>
               </div>
             </li>
             <li class="scenario-card">
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Situation</p>
+                <p class="scenario-card__label">Situación · personas</p>
                 <p class="scenario-card__text">
-                  After the first allocation, treasury and risk lack concise monitoring and no one
-                  owns re-deposit or top-up prompts.
+                  Después del primer uso exitoso, no hay un circuito liviano para una segunda
+                  acción (ej.: débito automático, inversión simple, beneficios) y el cliente
+                  queda inactivo.
                 </p>
               </div>
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Agent in practice</p>
+                <p class="scenario-card__label">Agente en la práctica</p>
                 <p class="scenario-card__text">
-                  Delivers a tight positions view for ops and configures lifecycle rules for
-                  thresholds, drift, and treasury reminders.
+                  Configura reglas de lifecycle con opt-in explícito: umbrales, recordatorios y
+                  ofertas acotadas al perfil y a lo que el banco permite comunicar en ese canal.
                 </p>
               </div>
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Impact</p>
+                <p class="scenario-card__label">Impacto</p>
                 <p class="scenario-card__text">
-                  Stronger first-to-second deposit behavior and active institutional AUM over time,
-                  not a one-off funding event.
+                  Mejor tasa de segunda acción entre D7 y D30 y más uso recurrente del canal digital,
+                  no un evento único de onboarding.
                 </p>
               </div>
             </li>
             <li class="scenario-card">
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Situation</p>
+                <p class="scenario-card__label">Situación · empresas</p>
                 <p class="scenario-card__text">
-                  Rootstock Labs and ecosystem partners need a repeatable institutional journey that
-                  stays policy-aware across teams and channels.
+                  Mesa comercial, riesgos y operaciones piden cosas distintas en paralelo; la
+                  PYME o el corporate mid-market no tiene claro el orden ni el estado del alta.
                 </p>
               </div>
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Agent in practice</p>
+                <p class="scenario-card__label">Agente en la práctica</p>
                 <p class="scenario-card__text">
-                  Same command and inspection surface for integrators: embed or wrap the flow so
-                  partner funnels share one guided path to Rootstock-linked vault participation.
+                  Mantiene contexto de sesión y rol, lista pendientes por área y propone el
+                  siguiente paso con puertas de aprobación y registro auditable para el comité o
+                  la sucursal.
                 </p>
               </div>
               <div class="scenario-card__cell">
-                <p class="scenario-card__label">Impact</p>
+                <p class="scenario-card__label">Impacto</p>
                 <p class="scenario-card__text">
-                  More consistent conversion across partners; clearer attribution of institutional
-                  intent and funded activity tied to the network.
+                  Menos tiempo hasta la primera operación habilitada; menos idas y vueltas
+                  informales por mail o chat sin trazabilidad.
+                </p>
+              </div>
+            </li>
+            <li class="scenario-card">
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Situación · empresas</p>
+                <p class="scenario-card__text">
+                  El banco suma nuevos productos, partners o canales y necesita un recorrido
+                  repetible que respete política y documentación interna sin improvisar en cada
+                  mesa.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Agente en la práctica</p>
+                <p class="scenario-card__text">
+                  Misma superficie de comandos para equipos técnicos y de negocio: inspección
+                  primero, ejecución después, con explicación de permitido, bloqueado o aprobación
+                  humana, por ejemplo en un piloto acotado con dual control.
+                </p>
+              </div>
+              <div class="scenario-card__cell">
+                <p class="scenario-card__label">Impacto</p>
+                <p class="scenario-card__text">
+                  Piloto más rápido de evaluar con el directorio; atribución más clara de qué
+                  pasos del embudo generan actividad real en el canal.
                 </p>
               </div>
             </li>
@@ -280,29 +330,29 @@ rootstock institutional session start --org "NorthBridge Capital"
         </div>
       </section>
 
-      <!-- Launch flows: 3 steps + compact terminals -->
-      <section class="section launch" id="flows">
+      <section class="section launch" id="flujos">
         <div class="container">
-          <p class="section-kicker">Launch institutional flows fast</p>
-          <h2>From setup to first allocation in a few guided steps</h2>
+          <p class="section-kicker">Lanzar flujos en semanas, no en trimestres</p>
+          <h2>Del contexto del banco a la primera operación piloto en tres pasos guiados</h2>
           <p class="section-lead">
-            Connect policy context, qualify the account, and move to vault allocation without losing
-            momentum across teams.
+            Conectar políticas y perfiles de canal, calificar el caso y llegar a la acción
+            definida como éxito del piloto, sin perder momentum entre personas, empresas y
+            tecnología.
           </p>
           <ol class="steps">
             <li class="steps__item">
               <div class="steps__num">1</div>
               <div class="steps__content">
-                <h3>Connect institutional context</h3>
+                <h3>Conectar contexto del banco</h3>
                 <p>
-                  Set org profile, roles, and permissions so the agent operates inside approved
-                  boundaries.
+                  Perfil de organización, roles y permisos para que el agente opere solo dentro
+                  de los límites que el banco define.
                 </p>
-                <figure class="terminal-card terminal-card--compact" aria-label="Step 1 CLI">
+                <figure class="terminal-card terminal-card--compact" aria-label="CLI paso 1">
                   <div class="terminal-card__bar">
-                    <span class="terminal-card__title">step 1</span>
+                    <span class="terminal-card__title">paso 1</span>
                     <button type="button" class="terminal-card__copy" data-copy-for="flow-1">
-                      Copy
+                      Copiar
                     </button>
                   </div>
                   <div
@@ -312,24 +362,25 @@ rootstock institutional session start --org "NorthBridge Capital"
                     data-terminal-body="flow-1"
                     role="textbox"
                     aria-multiline="true"
-                  >rootstock institutional session start \
-  --org "NorthBridge Capital" \
-  --role "treasury_manager"</div>
+                  >banco session start \
+  --entidad "Banco_Arg" \
+  --rol "lider_canal_digital"</div>
                 </figure>
               </div>
             </li>
             <li class="steps__item">
               <div class="steps__num">2</div>
               <div class="steps__content">
-                <h3>Qualify and route</h3>
+                <h3>Calificar y enrutar</h3>
                 <p>
-                  Run checks and get a clear go/no-go with the next operational step surfaced automatically.
+                  Correr chequeos y obtener un sí / no / pendiente claro, con el siguiente paso
+                  operativo listo para quien decida.
                 </p>
-                <figure class="terminal-card terminal-card--compact" aria-label="Step 2 CLI">
+                <figure class="terminal-card terminal-card--compact" aria-label="CLI paso 2">
                   <div class="terminal-card__bar">
-                    <span class="terminal-card__title">step 2</span>
+                    <span class="terminal-card__title">paso 2</span>
                     <button type="button" class="terminal-card__copy" data-copy-for="flow-2">
-                      Copy
+                      Copiar
                     </button>
                   </div>
                   <div
@@ -339,25 +390,26 @@ rootstock institutional session start --org "NorthBridge Capital"
                     data-terminal-body="flow-2"
                     role="textbox"
                     aria-multiline="true"
-                  >rootstock institutional qualify \
-  --check kyc,aml,custody,policy \
-  --output summary</div>
+                  >banco qualificar \
+  --segmento personas,empresas \
+  --chequeos politica,canal,producto \
+  --salida resumen</div>
                 </figure>
               </div>
             </li>
             <li class="steps__item">
               <div class="steps__num">3</div>
               <div class="steps__content">
-                <h3>Allocate and activate lifecycle</h3>
+                <h3>Ejecutar el piloto y activar lifecycle</h3>
                 <p>
-                  Submit allocation plans behind approvals, then enable monitoring and re-deposit
-                  notifications.
+                  Dejar armados los planes de acción detrás de aprobaciones, y encender
+                  monitoreo y notificaciones alineadas a reglas del banco.
                 </p>
-                <figure class="terminal-card terminal-card--compact" aria-label="Step 3 CLI">
+                <figure class="terminal-card terminal-card--compact" aria-label="CLI paso 3">
                   <div class="terminal-card__bar">
-                    <span class="terminal-card__title">step 3</span>
+                    <span class="terminal-card__title">paso 3</span>
                     <button type="button" class="terminal-card__copy" data-copy-for="flow-3">
-                      Copy
+                      Copiar
                     </button>
                   </div>
                   <div
@@ -367,8 +419,8 @@ rootstock institutional session start --org "NorthBridge Capital"
                     data-terminal-body="flow-3"
                     role="textbox"
                     aria-multiline="true"
-                  >rootstock allocate plan --vaults btc,usd --mode guided
-rootstock lifecycle notify --rule redeposit --cadence weekly</div>
+                  >banco plan piloto --objetivo primera_operacion --modo guiado
+banco lifecycle notify --regla segunda_accion --cadencia acordada</div>
                 </figure>
               </div>
             </li>
@@ -376,75 +428,77 @@ rootstock lifecycle notify --rule redeposit --cadence weekly</div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section alt">
         <div class="container">
-          <h2>What this enables in practice</h2>
+          <h2>Qué habilita en la práctica</h2>
           <div class="cards two-col">
             <article class="card">
-              <h3>Pre-deposit qualification</h3>
+              <h3>Pre-operación · personas</h3>
               <p>
-                The agent answers recurring diligence questions and routes teams to the exact next
-                operational step.
+                Responder preguntas recurrentes de diligencia y derivar al paso operativo exacto
+                que falta en el canal digital.
               </p>
             </article>
             <article class="card">
-              <h3>Guided first allocation</h3>
+              <h3>Primera operación · empresas</h3>
               <p>
-                Convert interested leads into first funded BTC/USD vault positions through one
-                guided path.
+                Convertir leads comerciales en primera habilitación o operación concreta con un
+                camino guiado y trazable.
               </p>
             </article>
             <article class="card">
-              <h3>Post-deposit retention</h3>
+              <h3>Post-operación y recurrencia</h3>
               <p>
-                Keep treasury teams active with policy-safe notifications and expansion
-                opportunities.
+                Mantener activos los mandatos con notificaciones permitidas por política y
+                oportunidades de expansión de servicio medibles.
               </p>
             </article>
             <article class="card">
-              <h3>Institutional operating rhythm</h3>
-              <p>Turn daily monitoring, action preparation, and allocation into one workflow.</p>
+              <h3>Ritmo operativo conjunto</h3>
+              <p>
+                Unificar monitoreo, preparación de acciones y escalamiento humano en un mismo
+                flujo para equipos de producto y operaciones.
+              </p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Agentic flow: topology + status terminal -->
-      <section class="section alt agentic">
+      <section class="section agentic">
         <div class="container">
-          <p class="section-kicker">Institutional flow</p>
-          <h2>One programmable layer from intent to vault participation</h2>
+          <p class="section-kicker">Arquitectura de flujo</p>
+          <h2>Una capa orquestable desde la intención hasta la operación en canal</h2>
           <p class="section-lead">
-            Topology mirrors how teams actually operate: policy first, then rails, then lifecycle
-            signals back to treasury.
+            La topología refleja cómo trabajan los bancos: primero política y aprobaciones, luego
+            canales y core, después señales de lifecycle hacia producto y comercial.
           </p>
           <div class="agentic-grid">
             <div class="agentic-topology-wrap">
               <div class="topology-header">
-                <span class="topology-label">Topology</span>
+                <span class="topology-label">Topología</span>
                 <button
                   type="button"
                   class="terminal-card__copy terminal-card__copy--ghost"
                   data-copy-text="#topology-block"
                 >
-                  Copy
+                  Copiar
                 </button>
               </div>
-              <pre class="topology-pre" id="topology-block" aria-label="Flow topology">Institutional desk
-+-- Rootstock CLI Agent
-|   +-- Policy + approvals
-|   +-- Custodian / wallet stack
-|   +-- Rootstock vault rails (BTC / USD)
-|   +-- Lifecycle notifications
-|       +-- monitor
-|       +-- qualify
-|       +-- redeposit</pre>
+              <pre class="topology-pre" id="topology-block" aria-label="Topología de flujo">Mesa del banco (Personas + Empresas)
++-- Banco CLI
+|   +-- Políticas y aprobaciones
+|   +-- Canales digitales y operación
+|   +-- Producto / comercial (contexto)
+|   +-- Lifecycle y notificaciones
+|       +-- monitorear
+|       +-- calificar
+|       +-- siguiente paso</pre>
             </div>
-            <figure class="terminal-card" aria-label="Flow status output">
+            <figure class="terminal-card" aria-label="Salida de estado del flujo">
               <div class="terminal-card__bar">
-                <span class="terminal-card__title">flow status</span>
+                <span class="terminal-card__title">estado del flujo</span>
                 <button type="button" class="terminal-card__copy" data-copy-for="agentic">
-                  Copy
+                  Copiar
                 </button>
               </div>
               <div
@@ -455,175 +509,187 @@ rootstock lifecycle notify --rule redeposit --cadence weekly</div>
                 role="textbox"
                 aria-multiline="true"
               >{
-  "session": "northbridge_capital",
-  "stage": "allocate_ready",
-  "policy": "pending_dual_sign",
-  "vaults": ["btc", "usd"],
-  "next": "submit_plan_for_approval"
+  "sesion": "banco_piloto",
+  "etapa": "listo_para_prueba",
+  "politica": "aprobacion_dual_pendiente",
+  "canales": ["app_personas", "hb_empresas"],
+  "siguiente": "definir_kpis_y_ambito_piloto"
 }</div>
             </figure>
           </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section alt">
         <div class="container">
-          <h2>Designed for institutional controls from day one</h2>
+          <h2>Diseñado para controles del banco desde el día uno</h2>
           <p class="section-lead">
-            The agent acts as an orchestration layer above existing custody and policy processes,
-            reducing complexity without bypassing governance.
+            El agente actúa como capa de orquestación sobre procesos, core y herramientas que el
+            banco ya tiene: reduce complejidad para el usuario final y para el equipo interno,
+            sin saltear gobierno ni auditoría.
           </p>
-          <pre class="diagram" aria-label="High-level architecture">
-Institutional Team
+          <pre class="diagram" aria-label="Arquitectura de alto nivel">
+Equipo del banco (Personas / Empresas / Tecnología)
    |
-Rootstock CLI Agent
-   |-- Policy and Approval Layer
-   |-- Custodian / Wallet Stack
-   |-- Rootstock Vault Rails
-   `-- Lifecycle Notification Engine
+Banco CLI
+   |-- Capa de política y aprobaciones
+   |-- Canales digitales y operación
+   |-- Productos y partners (piloto acotado)
+   `-- Motor de notificaciones y lifecycle
           </pre>
         </div>
       </section>
 
-      <section class="section alt">
+      <section class="section">
         <div class="container">
-          <h2>KPIs tied to growth, not vanity metrics</h2>
+          <h2>KPIs atados a negocio, no a vanidad</h2>
+          <p class="section-lead">
+            En personas se miden activación y recurrencia en canal; en empresas, tiempo hasta
+            operación y calidad del pipeline. Un piloto de 4 a 6 semanas puede instrumentar ambos
+            con tableros simples.
+          </p>
           <ul class="kpis">
-            <li>Lead-to-qualified institutional conversion</li>
-            <li>Qualified-to-onboarded completion</li>
-            <li>Onboarded-to-first-funded allocation</li>
-            <li>First-to-second deposit conversion</li>
-            <li>Active institutional AUM retention and expansion</li>
+            <li>Conversión de intención a primera acción completada (app / HB personas).</li>
+            <li>Tasa de segunda acción entre D7 y D30 y retención de uso del canal digital.</li>
+            <li>Tiempo desde lead B2B hasta primera operación o servicio habilitado.</li>
+            <li>Completitud de onboarding empresas con menos retrabajo entre áreas.</li>
+            <li>Expansión de servicio y recurrencia operativa en la base corporate / Pymes.</li>
           </ul>
         </div>
       </section>
 
-      <!-- Commands grid (Uphold-style) -->
-      <section class="section commands" id="commands">
+      <section class="section commands alt" id="comandos">
         <div class="container">
-          <p class="section-kicker">Command surface</p>
-          <h2>Programmable commands for institutional funnel operations</h2>
+          <p class="section-kicker">Superficie de comandos</p>
+          <h2>Comandos programables para operar el embudo con trazabilidad</h2>
           <p class="section-lead">
-            Inspect before you execute. Every critical path can require explicit approvals in
-            production.
+            Inspeccionar antes de ejecutar. En producción, cada camino crítico puede exigir
+            aprobaciones explícitas y registro para auditoría interna y reguladores, según diseño
+            del banco.
           </p>
           <ul class="command-list">
             <li class="command-list__row">
-              <code class="command-list__cmd">rootstock institutional qualify</code>
-              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <code class="command-list__cmd">banco qualificar</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspección</span>
               <span class="command-list__desc"
-                >Run eligibility and policy checks with a summary for decision-makers.</span
+                >Correr elegibilidad y chequeos de política con resumen para quien decide.</span
               >
             </li>
             <li class="command-list__row">
-              <code class="command-list__cmd">rootstock vaults recommend</code>
-              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <code class="command-list__cmd">banco rutas sugerir</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspección</span>
               <span class="command-list__desc"
-                >Map mandate and risk profile to BTC/USD vault pathways.</span
+                >Mapear segmento y perfil de riesgo a rutas de producto y canal permitidas.</span
               >
             </li>
             <li class="command-list__row">
-              <code class="command-list__cmd">rootstock allocate plan</code>
-              <span class="command-list__badge command-list__badge--execute">Execute</span>
+              <code class="command-list__cmd">banco plan piloto</code>
+              <span class="command-list__badge command-list__badge--execute">Ejecución</span>
               <span class="command-list__desc"
-                >Draft allocation plans with approval gates and audit trail.</span
+                >Armar planes de acción con puertas de aprobación y pista de auditoría.</span
               >
             </li>
             <li class="command-list__row">
-              <code class="command-list__cmd">rootstock positions monitor</code>
-              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <code class="command-list__cmd">banco posiciones monitor</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspección</span>
               <span class="command-list__desc"
-                >Concise KPI view for treasury and ops without noise.</span
+                >Vista breve de KPIs para tesorería y operaciones sin ruido innecesario.</span
               >
             </li>
             <li class="command-list__row">
-              <code class="command-list__cmd">rootstock lifecycle notify</code>
-              <span class="command-list__badge command-list__badge--execute">Execute</span>
+              <code class="command-list__cmd">banco lifecycle notify</code>
+              <span class="command-list__badge command-list__badge--execute">Ejecución</span>
               <span class="command-list__desc"
-                >Configure re-deposit and drift rules that keep AUM active.</span
+                >Configurar recordatorios y reglas de segunda acción alineadas a política.</span
               >
             </li>
             <li class="command-list__row">
-              <code class="command-list__cmd">rootstock policy explain</code>
-              <span class="command-list__badge command-list__badge--inspect">Inspect</span>
+              <code class="command-list__cmd">banco politica explicar</code>
+              <span class="command-list__badge command-list__badge--inspect">Inspección</span>
               <span class="command-list__desc"
-                >Show why an action is allowed, blocked, or needs human approval.</span
+                >Mostrar por qué una acción está permitida, bloqueada o requiere aprobación humana.</span
               >
             </li>
           </ul>
         </div>
       </section>
 
-      <section id="pilot" class="section">
+      <section id="piloto" class="section">
         <div class="container">
-          <h2>Start with a focused 4-6 week pilot</h2>
+          <h2>Empezar con un piloto focalizado de 4 a 6 semanas</h2>
           <div class="cards two-col">
             <article class="card">
-              <h3>Scope</h3>
+              <h3>Alcance</h3>
               <ul>
-                <li>Funnel discovery and prioritization</li>
-                <li>Agent workflow for onboarding and first allocation</li>
-                <li>Lifecycle strategy for re-deposit behavior</li>
-                <li>KPI instrumentation and reporting model</li>
+                <li>Discovery de embudos en personas y empresas (dónde más duele hoy).</li>
+                <li>Flujos de agente para onboarding digital y/o alta B2B acotada.</li>
+                <li>Estrategia de lifecycle para segunda acción o completitud de implementación.</li>
+                <li>Definición de KPIs y modelo de reporting para comité de piloto.</li>
               </ul>
             </article>
             <article class="card">
-              <h3>Deliverables</h3>
+              <h3>Entregables</h3>
               <ul>
-                <li>Working demo flows</li>
-                <li>Funnel KPI dashboard definition</li>
-                <li>Pilot retrospective and rollout recommendation</li>
-                <li>Decision-ready implementation plan</li>
+                <li>Flujos demo funcionando sobre el alcance acordado.</li>
+                <li>Boceto de tablero de KPIs del piloto.</li>
+                <li>Retrospectiva y recomendación de escalamiento o stop.</li>
+                <li>Plan de implementación listo para decisión de dirección.</li>
               </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Build with us + form -->
       <section id="build" class="section alt build">
         <div class="container build-grid">
           <div class="build-copy">
-            <p class="section-kicker">Build with us</p>
+            <p class="section-kicker">Construir con nosotros</p>
             <h2>
-              Partner with Wake Up Labs to launch institutional agent workflows on Rootstock Labs
-              Institutional Services
+              Wake Up Labs como socio de implementación de flujos con agente para tu banco
             </h2>
             <p class="section-lead">
-              Tell us which funnel stages stall today, how custody and policy approvals work, and
-              what “funded vault position” means for your target accounts. We will come back with
-              example flows, integration guidance, and clear next steps.
+              Contanos en qué etapa del embudo se caen hoy las conversiones, cómo funcionan las
+              aprobaciones de riesgos y compliance, y qué cuenta como “primera operación exitosa”
+              en personas y en empresas. Volvemos con flujos de ejemplo, guía de integración y
+              próximos pasos concretos.
             </p>
             <ul class="build-bullets">
-              <li>Teams scaling institutional BTC/USD vault participation.</li>
-              <li>Platforms orchestrating treasury, compliance, and on-chain allocation.</li>
-              <li>Enterprises needing faster conversion without weakening controls.</li>
+              <li>Equipos de banca digital y producto que necesitan más activación en canal.</li>
+              <li>Mesas comerciales y de operaciones con empresas que quieren menos fricción.</li>
+              <li>Direcciones que buscan pilotar nuevos productos con gobierno fuerte desde el inicio.</li>
             </ul>
           </div>
           <div class="build-form-wrap">
-            <form id="contact-form" class="contact-form" novalidate>
+            <form
+              id="contact-form"
+              class="contact-form"
+              novalidate
+              data-contact-subject="Banco CLI Wake Up Labs · consulta banco"
+            >
               <label class="field">
-                <span class="field__label">Name</span>
+                <span class="field__label">Nombre</span>
                 <input class="field__input" type="text" name="name" autocomplete="name" required />
               </label>
               <label class="field">
-                <span class="field__label">Email</span>
+                <span class="field__label">Correo electrónico</span>
                 <input class="field__input" type="email" name="email" autocomplete="email" required />
               </label>
               <label class="field">
-                <span class="field__label">I am a…</span>
+                <span class="field__label">Soy…</span>
                 <select class="field__input" name="role" required>
-                  <option value="">Select…</option>
-                  <option value="Developer">Developer</option>
-                  <option value="Business">Business</option>
-                  <option value="Institution">Institution</option>
+                  <option value="">Elegir…</option>
+                  <option value="Banca personas / digital">Banca personas / digital</option>
+                  <option value="Banca empresas / tesorería">Banca empresas / tesorería</option>
+                  <option value="Tecnología / operaciones">Tecnología / operaciones</option>
+                  <option value="Riesgos / compliance">Riesgos / compliance</option>
+                  <option value="Otro">Otro</option>
                 </select>
               </label>
               <label class="field">
-                <span class="field__label">Message (optional)</span>
+                <span class="field__label">Mensaje (opcional)</span>
                 <textarea class="field__input field__textarea" name="message" rows="4"></textarea>
               </label>
-              <button type="submit" class="btn btn-primary btn-block">Talk to the team</button>
+              <button type="submit" class="btn btn-primary btn-block">Hablar con el equipo</button>
             </form>
           </div>
         </div>
@@ -631,25 +697,26 @@ Rootstock CLI Agent
 
       <section id="cta" class="section cta">
         <div class="container">
-          <h2>The institutional funnel needs an operator, not just documentation.</h2>
+          <h2>El embudo digital necesita un operador, no solo un PDF.</h2>
           <p>
-            If Rootstock Labs wants more capital flowing into vault participation, we can bring an
-            illustrative agent flow, KPI framing, and implementation roadmap to the strategy call.
-            Pilot execution is delivered by Wake Up Labs under contract—we don't build pilots for
-            free ahead of a commercial agreement.
+            Si el objetivo es que más clientes personas y empresas completen operaciones útiles en
+            el canal y evaluar con rigor un piloto con KPIs claros, podemos traer a la
+            reunión flujos ilustrativos, marco de métricas y roadmap de implementación. La ejecución
+            del piloto la entrega Wake Up Labs bajo contrato; no construimos pilotos completos
+            antes de un acuerdo comercial.
           </p>
           <a
             class="btn btn-primary"
             href="https://zcal.co/wakeuplabs"
             target="_blank"
             rel="noopener noreferrer"
-            >Book strategy call</a>
+            >Agendar llamada</a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-logos" aria-label="Wake Up Labs and Rootstock Labs">
+      <div class="footer-logos" aria-label="Wake Up Labs y Overboost">
         <div class="container footer-logos__inner">
           <a
             class="footer-logo-link"
@@ -668,28 +735,28 @@ Rootstock CLI Agent
             />
           </a>
           <a
-            class="footer-logo-link"
-            href="https://www.rootstocklabs.com/"
+            class="footer-logo-link footer-logo-link--overboost"
+            href="https://overboost.me/"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
-              class="footer-logo footer-logo--rs"
-              src="https://www.rootstocklabs.com/icons/icon-192x192.png"
-              alt="Rootstock Labs"
-              width="48"
-              height="48"
+              class="footer-logo footer-logo--overboost"
+              src="https://overboost.me/favicon.svg"
+              alt="Overboost"
+              width="200"
+              height="60"
               loading="lazy"
               decoding="async"
             />
-            <span class="footer-logo-wordmark" aria-hidden="true">Rootstock Labs</span>
           </a>
         </div>
       </div>
       <div class="container footer-inner">
         <p class="footer-note">
-          Proposal by Wake Up Labs. Commands and outputs shown here are illustrative unless otherwise
-          agreed with Rootstock Labs.
+          Propuesta de Wake Up Labs. Los comandos y salidas mostrados son ilustrativos salvo
+          acuerdo explícito con el banco. No constituye asesoramiento financiero
+          ni legal; el marco regulatorio aplicable es responsabilidad del banco y sus asesores.
         </p>
       </div>
     </footer>

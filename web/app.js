@@ -1,6 +1,6 @@
 (function () {
-  var THEME_KEY = "rootstock-theme";
-  var SNIPPET_PREFIX = "rootstock-snippet-";
+  var THEME_KEY = "banco-cli-theme";
+  var SNIPPET_PREFIX = "banco-cli-snippet-";
 
   function getStoredTheme() {
     try {
@@ -39,11 +39,16 @@
     applyTheme("light");
   }
 
+  function isEsLocale() {
+    var lang = document.documentElement.getAttribute("lang") || "";
+    return lang.toLowerCase().indexOf("es") === 0;
+  }
+
   function copyText(text, button) {
     function done() {
       if (!button) return;
       var prev = button.textContent;
-      button.textContent = "Copied";
+      button.textContent = isEsLocale() ? "Copiado" : "Copied";
       button.disabled = true;
       setTimeout(function () {
         button.textContent = prev;
@@ -69,7 +74,7 @@
         document.execCommand("copy");
         done();
       } catch (e) {
-        if (button) button.textContent = "Copy failed";
+        if (button) button.textContent = isEsLocale() ? "No se pudo copiar" : "Copy failed";
       }
       document.body.removeChild(ta);
     }
@@ -144,10 +149,20 @@
       var role = (fd.get("role") || "").toString().trim();
       var message = (fd.get("message") || "").toString().trim();
       var subjectLine =
-        form.getAttribute("data-contact-subject") || "Rootstock CLI Agent Pilot";
+        form.getAttribute("data-contact-subject") || "Banco CLI Agent Pilot";
       var subject = encodeURIComponent(subjectLine);
+      var es = isEsLocale();
       var mailBody = encodeURIComponent(
-        "Name: " + name + "\nEmail: " + email + "\nI am a: " + role + "\n\n" + message
+        (es ? "Nombre: " : "Name: ") +
+          name +
+          "\n" +
+          (es ? "Correo: " : "Email: ") +
+          email +
+          "\n" +
+          (es ? "Perfil: " : "I am a: ") +
+          role +
+          "\n\n" +
+          message
       );
       function mailtoFallback() {
         window.location.href =
@@ -158,7 +173,7 @@
       var prevLabel = btn ? btn.textContent : "";
       if (btn) {
         btn.disabled = true;
-        btn.textContent = "Sending…";
+        btn.textContent = es ? "Enviando…" : "Sending…";
       }
 
       fetch("/api/contact", {
@@ -173,7 +188,7 @@
           });
         })
         .then(function () {
-          if (btn) btn.textContent = "Sent";
+          if (btn) btn.textContent = es ? "Enviado" : "Sent";
           form.reset();
           setTimeout(function () {
             if (btn) {

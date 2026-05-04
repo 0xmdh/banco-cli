@@ -4,31 +4,31 @@ Use **Cloudflare DNS** (and optional proxy) in front of **Vercel** hosting.
 
 ## Static routes
 
-This repo serves **two HTML entry points** from the same deployment:
+Desde la raíz del deploy (`web/` en Vercel):
 
-- **`/`** — institutional proposal (`index.html`)
-- **`/retail/`** — retail & ecosystem proposal (`retail/index.html`)
+- **`/`** — landing Banco CLI × Wake Up Labs (propuesta bancos, personas y empresas)
+- **`/retail/`** — redirección / aviso hacia el contenido unificado en `/`
 
-No special rewrite is required on Vercel for static files. `POST /api/contact` remains at the site root and works from both pages.
+`POST /api/contact` queda en la raíz del sitio y sirve para el formulario de la landing.
 
-## DNS
+## DNS (producción `banco.wup.ar`)
 
-1. In Vercel: add the custom domain (e.g. `rootstock.wup.ar`) and follow Vercel’s instructions.
-2. In Cloudflare **DNS** for the zone:
-   - **CNAME** `rootstock` → `cname.vercel-dns.com` (or the hostname Vercel shows).
-   - If you use the apex domain, use the **A** / **ALIAS** pattern Vercel documents for apex.
+1. En **Vercel**: proyecto con **Root Directory** = `web` → **Settings → Domains** → agregar `banco.wup.ar` y seguir lo que indique Vercel.
+2. En **Cloudflare** (zona `wup.ar`):
+   - **CNAME** nombre `banco` → el host que muestre Vercel (suele ser `cname.vercel-dns.com` o un target específico del proyecto).
+
+Si ya existe otro subdominio apuntando a otro proyecto, cada hostname va al **proyecto Vercel** donde lo agregaste; no hace falta tocar los demás.
 
 ## SSL / TLS
 
-- Cloudflare **SSL/TLS** mode: **Full (strict)** is typical when Vercel serves a valid certificate for your hostname.
-- If the hostname is a subdomain only on Vercel, ensure the certificate is issued in Vercel before enabling strict mode.
+- Cloudflare **SSL/TLS**: **Full (strict)** cuando Vercel ya emitió certificado para `banco.wup.ar`.
 
-## Proxy (orange cloud)
+## Proxy (nube naranja)
 
-- **Proxied**: Cloudflare CDN/WAF applies; ensure no conflicting rules block `POST /api/contact`.
-- **DNS only**: traffic goes straight to Vercel; simpler debugging.
+- **Proxied**: CDN/WAF de Cloudflare; revisá que no bloquee `POST /api/contact`.
+- **DNS only**: tráfico directo a Vercel; más simple para depurar.
 
-## Optional
+## Opcional
 
-- **WAF / Rate limiting** on `POST /api/contact` to reduce abuse.
-- **Cache rules**: do not cache ` /api/*` or HTML if you need fresh dynamic behavior.
+- **WAF / rate limit** en `POST /api/contact` frente a abuso.
+- **Reglas de caché**: no cachear `/api/*` si necesitás comportamiento siempre dinámico.

@@ -1,46 +1,38 @@
-# rootstock-institutional
+# Banco CLI (Wake Up Labs)
 
-Proposal landing and deliverables for **Rootstock CLI Agent x Wake Up Labs**.
+Landing y API de contacto para la propuesta **Banco CLI × Wake Up Labs** (banca personas y empresas).
 
-## Site structure (two audiences, separate pages)
+**Producción:** `https://banco.wup.ar` (dominio en Vercel + DNS en Cloudflare).
 
-| Path | Audience |
-|------|-----------|
-| **`/`** ([`index.html`](index.html) or [`web/index.html`](web/index.html)) | **Institutional** — vault funnel, compliance-oriented CLI agent concept |
-| **`/retail/`** ([`retail/index.html`](retail/index.html)) | **Retail & ecosystem** — wallets, bridges, explorer, dApps, activation KPIs |
+## Estructura del sitio
 
-Headers link across the two experiences so they are never mixed in one scroll. Optional hub (two cards) can be added later; today cross-navigation is enough.
+| Ruta | Contenido |
+|------|------------|
+| **`/`** | Landing principal (`index.html` o `web/index.html`) |
+| **`/retail/`** | Página mínima con enlace al inicio (`retail/index.html`) |
 
 ## Stack
 
-| Piece | Role |
-|--------|------|
-| **Vercel** | Hosts `web/` (static site + `/api/contact` serverless) |
-| **Cloudflare** | DNS (and optional proxy/WAF) for `rootstock.wup.ar` → Vercel |
-| **Supabase** | Postgres table `contact_submissions`; API inserts via **service_role** on Vercel only |
+| Pieza | Rol |
+|--------|-----|
+| **Vercel** | Hostea `web/` (estático + `POST /api/contact`) |
+| **Cloudflare** | DNS para `banco.wup.ar` → Vercel |
+| **Supabase** | Tabla `contact_submissions`; la API usa **service_role** solo en servidor |
 
-Details: [`docs/cloudflare-vercel.md`](docs/cloudflare-vercel.md), [`supabase/README.md`](supabase/README.md).
+Detalle: [`docs/cloudflare-vercel.md`](docs/cloudflare-vercel.md), [`supabase/README.md`](supabase/README.md).
 
-## Deploy (Vercel)
+## Deploy (proyecto nuevo en Vercel)
 
-1. Push **`main`** to your Git remote.
-2. New Vercel project → import repo → set **Root Directory** to **`web`**.
-3. Add env vars: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`.
-4. Run Supabase migration (see `supabase/migrations/`) or `supabase db push`.
-5. In Vercel, add custom domain **`rootstock.wup.ar`** (and DNS en Cloudflare según lo que indique Vercel).
-6. In **Cloudflare**, CNAME that hostname to the target Vercel shows (often `cname.vercel-dns.com`). Use **SSL: Full (strict)** when the cert is active on Vercel.
+1. **Vercel** → *Add New* → *Project* → importá este repo.
+2. **Root Directory:** `web` (importante).
+3. **Environment variables:** `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY` (mismo esquema que otros sitios si compartís proyecto Supabase).
+4. **Deploy**; cuando esté verde, **Settings → Domains** → agregar **`banco.wup.ar`**.
+5. **Cloudflare** (zona `wup.ar`): registro **CNAME** `banco` → destino que indique Vercel (típico `cname.vercel-dns.com`). SSL **Full (strict)** cuando el certificado en Vercel esté listo.
 
-## Local env (optional)
+Entorno local con API: copiá [`.env.example`](.env.example) a `web/.env.local` y `cd web && npm install && npx vercel dev`.
 
-Copy [`.env.example`](.env.example) to `web/.env.local` when using `vercel dev` (Vercel loads it for serverless).
+## Repo
 
-## CTAs
-
-- **Book strategy call** → [https://zcal.co/wakeuplabs](https://zcal.co/wakeuplabs)
-
-## Repo layout
-
-- [`web/`](web/) — production site + API
-- [`supabase/`](supabase/) — SQL migrations
-- [`deliverables/`](deliverables/) — messaging, copy, pilot notes
-- [`docs/`](docs/) — infra notes
+- [`web/`](web/) — sitio y API que despliega Vercel
+- [`supabase/`](supabase/) — migraciones SQL
+- [`docs/`](docs/) — infra

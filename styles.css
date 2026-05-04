@@ -1,38 +1,6 @@
 /*
-  Visual system aligned to https://www.rootstocklabs.com/institutional/
-  (Rootstock Sans, cream background #fafaf5, ink #000 / #121212, grays from published CSS.)
-  Fonts are loaded from rootstocklabs.com — same files as the institutional site.
+  Landing bancaria: tipografía del sistema, fondo crema #fafaf5, contraste tipo ink.
 */
-
-@font-face {
-  font-display: swap;
-  font-family: "Rootstock Sans";
-  font-style: normal;
-  font-weight: 400;
-  src:
-    url("https://www.rootstocklabs.com/fonts/Rootstock-Sans-Body.woff2") format("woff2"),
-    url("https://www.rootstocklabs.com/fonts/Rootstock-Sans-Body.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Rootstock Sans";
-  font-style: normal;
-  font-weight: 500;
-  src:
-    url("https://www.rootstocklabs.com/fonts/Rootstock-Sans-Tags.woff2") format("woff2"),
-    url("https://www.rootstocklabs.com/fonts/Rootstock-Sans-Tags.woff") format("woff");
-}
-
-@font-face {
-  font-display: swap;
-  font-family: "Rootstock Sans";
-  font-style: normal;
-  font-weight: 700;
-  src:
-    url("https://www.rootstocklabs.com/fonts/Rootstock-Sans-Headline.woff2") format("woff2"),
-    url("https://www.rootstocklabs.com/fonts/Rootstock-Sans-Headline.woff") format("woff");
-}
 
 html[data-theme="light"] {
   --rs-body-bg: #fafaf5;
@@ -90,8 +58,8 @@ html {
 
 body {
   margin: 0;
-  font-family: "Rootstock Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.35;
@@ -100,7 +68,7 @@ body {
   background-color: var(--rs-body-bg);
 }
 
-/* Layout — container rhythm (generous horizontal inset so header/title never hugs the viewport) */
+/* Layout: container rhythm (generous horizontal inset so header/title never hugs the viewport) */
 .container {
   width: 100%;
   max-width: 1440px;
@@ -123,7 +91,7 @@ body {
   }
 }
 
-/* Header — .header institutional */
+/* Header */
 .site-header {
   position: sticky;
   top: 0;
@@ -267,7 +235,7 @@ html[data-theme="dark"] .theme-toggle__btn.is-active {
   box-shadow: none;
 }
 
-/* Buttons — Rootstock .btn */
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -342,11 +310,11 @@ html[data-theme="dark"] .btn-secondary {
   width: 100%;
 }
 
-/* Typography — institutional scale (simplified for landing) */
+/* Typography scale */
 h1,
 h2,
 h3 {
-  font-family: "Rootstock Sans", Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.024em;
   color: var(--rs-heading);
   margin-top: 0;
@@ -650,7 +618,7 @@ html[data-theme="light"] .section.alt .card {
   overflow-x: auto;
 }
 
-/* Scenario cards — situation → agent → impact */
+/* Scenario cards: situation, agent, impact */
 .scenario-cards {
   list-style: none;
   margin: 28px 0 0;
@@ -863,7 +831,7 @@ html[data-theme="dark"] .command-list__badge--execute {
   line-height: 1.45;
 }
 
-/* Build + form — HubSpot / rl-form patterns from site */
+/* Build + form */
 .build-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -984,6 +952,18 @@ html[data-theme="dark"] .field__input:hover {
   opacity: 1;
 }
 
+/* Overboost mark is dark red on dark footer: give a light pad so the SVG reads */
+.footer-logo-link--overboost {
+  background-color: #f2f2ed;
+  padding: 12px 22px;
+  border-radius: 12px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.footer-logo-link--overboost:hover {
+  background-color: #fafaf5;
+}
+
 .footer-logo {
   display: block;
   height: auto;
@@ -996,6 +976,12 @@ html[data-theme="dark"] .field__input:hover {
   max-height: 32px;
 }
 
+.footer-logo--overboost {
+  max-height: 52px;
+  max-width: min(240px, 55vw);
+  width: auto;
+}
+
 .footer-logo--rs {
   max-height: 44px;
   width: 44px;
@@ -1003,7 +989,7 @@ html[data-theme="dark"] .field__input:hover {
 }
 
 .footer-logo-wordmark {
-  font-family: "Rootstock Sans", Arial, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
   font-size: 1.125rem;
   letter-spacing: -0.03em;

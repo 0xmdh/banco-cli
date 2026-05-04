@@ -1,50 +1,43 @@
-# Rootstock CLI Agent x Wake Up Labs — Web (Vercel)
+# Banco CLI × Wake Up Labs — Web (Vercel)
 
-- **`/`** — institutional proposal (`index.html`)
-- **`/retail/`** — retail & ecosystem proposal (`retail/index.html`)
+Esta carpeta es la **raíz del proyecto en Vercel**: configurá **Root Directory** = `web`.
 
-This folder is the **Vercel project root**: set **Root Directory** to `web` in the Vercel dashboard (or connect only this path in a monorepo).
+**Producción:** `https://banco.wup.ar`
 
-**Production URL:** `https://rootstock.wup.ar` (custom domain en Vercel + DNS).
+## Rutas
 
-## Files
+- **`/`** — `index.html` (landing bancos)
+- **`/retail/`** — `retail/index.html` (enlace al inicio)
 
-- `index.html`, `styles.css`, `app.js` — landing UI
-- `api/contact.js` — serverless handler: writes form submissions to Supabase (`contact_submissions`)
-- `package.json` — dependency for `@supabase/supabase-js` (used only by the API route)
+## Archivos
 
-## Environment (Vercel)
+- `index.html`, `styles.css`, `app.js` — UI
+- `api/contact.js` — serverless: inserta en Supabase (`contact_submissions`)
+- `package.json` — dependencia `@supabase/supabase-js` (solo la API)
 
-| Variable | Description |
+## Variables (Vercel)
+
+| Variable | Descripción |
 |----------|-------------|
-| `SUPABASE_URL` | Supabase project URL |
-| `SUPABASE_SERVICE_ROLE_KEY` | **service_role** key (server only) |
+| `SUPABASE_URL` | URL del proyecto Supabase |
+| `SUPABASE_SERVICE_ROLE_KEY` | clave **service_role** (solo servidor) |
 
-See [`../supabase/README.md`](../supabase/README.md) for migrations.
+Ver [`../supabase/README.md`](../supabase/README.md).
 
-## Local preview
+## Local
 
-**Static only** (no `/api/contact`):
+Solo estático:
 
 ```bash
 cd web && python3 -m http.server 8080
 ```
 
-**With API** (needs Vercel CLI + env):
+Con API:
 
 ```bash
 cd web && npm install && npx vercel dev
 ```
 
-## Form behavior
+## DNS / SSL
 
-1. `POST /api/contact` with JSON → inserts into Supabase when env vars are set.
-2. If the request fails or Supabase is not configured, the client falls back to **mailto** `hello@wakeuplabs.io`.
-
-## Design parity
-
-Aligned to [Rootstock institutional](https://www.rootstocklabs.com/institutional/): Rootstock Sans from their CDN, cream background, pill buttons, spacing rhythm.
-
-## Cloudflare
-
-DNS / SSL in front of Vercel: [`../docs/cloudflare-vercel.md`](../docs/cloudflare-vercel.md).
+[`../docs/cloudflare-vercel.md`](../docs/cloudflare-vercel.md)

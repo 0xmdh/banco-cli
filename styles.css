@@ -1205,18 +1205,6 @@ html[data-theme="dark"] .field__input:hover {
   opacity: 1;
 }
 
-/* Overboost mark is dark red on dark footer: give a light pad so the SVG reads */
-.footer-logo-link--overboost {
-  background-color: #f2f2ed;
-  padding: 12px 22px;
-  border-radius: 12px;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
-}
-
-.footer-logo-link--overboost:hover {
-  background-color: #fafaf5;
-}
-
 .footer-logo {
   display: block;
   height: auto;
@@ -1227,12 +1215,6 @@ html[data-theme="dark"] .field__input:hover {
 
 .footer-logo--wul {
   max-height: 32px;
-}
-
-.footer-logo--overboost {
-  max-height: 52px;
-  max-width: min(240px, 55vw);
-  width: auto;
 }
 
 .footer-logo--rs {

@@ -2,7 +2,7 @@
 
 **Repositorio:** [github.com/0xmdh/banco-cli](https://github.com/0xmdh/banco-cli)
 
-Landing y API de contacto para la propuesta **Banco CLI × Wake Up Labs** (banca personas y empresas).
+Landing y formulario de contacto **Banco CLI × Wake Up Labs** (banca personas y empresas).
 
 **Producción:** `https://banco.wup.ar` (dominio en Vercel + DNS en Cloudflare).
 

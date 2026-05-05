@@ -6,7 +6,7 @@ Use **Cloudflare DNS** (and optional proxy) in front of **Vercel** hosting.
 
 Desde la raíz del deploy (`web/` en Vercel):
 
-- **`/`** — landing Banco CLI × Wake Up Labs (propuesta bancos, personas y empresas)
+- **`/`** — landing Banco CLI × Wake Up Labs (banca personas y empresas)
 - **`/retail/`** — redirección / aviso hacia el contenido unificado en `/`
 
 `POST /api/contact` queda en la raíz del sitio y sirve para el formulario de la landing.

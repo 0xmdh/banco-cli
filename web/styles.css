@@ -457,9 +457,30 @@ p {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: clamp(24px, 4vw, 56px);
   align-items: stretch;
+}
+
+.hero-copy {
+  max-width: 52rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-copy .h1-sub {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 44rem;
+}
+
+.hero-copy .actions {
+  justify-content: center;
+}
+
+.hero .cards.two-col {
+  max-width: 52rem;
+  margin: 0 auto;
 }
 
 .actions {

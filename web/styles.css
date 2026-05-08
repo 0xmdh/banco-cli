@@ -1206,6 +1206,52 @@ html[data-theme="light"] .section.alt .card {
   padding-left: 1.1rem;
 }
 
+.explore-accordion {
+  border: 1px solid var(--rs-border-ui);
+  border-radius: 14px;
+  background: var(--rs-surface);
+  overflow: hidden;
+}
+
+.explore-accordion > summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.explore-accordion > summary::-webkit-details-marker {
+  display: none;
+}
+
+.explore-accordion__title {
+  font-weight: 700;
+  color: var(--rs-heading);
+}
+
+.explore-accordion__subtitle {
+  color: var(--rs-muted);
+  font-size: 0.9rem;
+}
+
+.explore-accordion > summary::after {
+  content: "▾";
+  color: var(--rs-muted);
+  transition: transform 0.2s ease;
+}
+
+.explore-accordion[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+.explore-accordion__content {
+  padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid var(--rs-border-ui);
+}
+
 .diagram {
   margin-top: 16px;
   background: var(--rs-terminal-body);

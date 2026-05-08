@@ -38,11 +38,12 @@
         </a>
         <div class="nav-actions">
           <nav class="nav-audience" aria-label="Secciones">
-            <a class="nav-audience__link" href="#personas">Personas</a>
+            <a class="nav-audience__link" href="#problema">Problema</a>
             <span class="nav-audience__sep" aria-hidden="true">/</span>
-            <a class="nav-audience__link" href="#empresas">Empresas</a>
+            <a class="nav-audience__link" href="#impacto">Impacto</a>
           </nav>
-          <a class="nav-product-link" href="#producto">Producto</a>
+          <a class="nav-product-link" href="#piloto">Piloto</a>
+          <a class="nav-product-link" href="#tecnico">Equipo técnico</a>
           <div
             class="theme-toggle"
             role="group"
@@ -91,15 +92,18 @@
           </div>
           <div class="hero-grid">
             <div class="hero-copy">
-              <p class="eyebrow">API bancaria, CLI y MCP</p>
-              <h1>Finanzas programables para tus clientes.</h1>
+              <p class="eyebrow">Para bancos e instituciones financieras de Latam</p>
+              <h1>
+                <strong>Las fintechs no ganaron por ser mejores.</strong>
+                <em>Ganaron por ser programables.</em>
+              </h1>
               <p class="h1-sub">
-                Misma oferta del banco vía API, terminal y herramientas para IA. Vos definís
-                límites, productos y auditoría.
+                Tenés productos, escala e infraestructura. Falta una capa para operar con ERPs,
+                apps y agentes de IA sin tocar tu core.
               </p>
               <p class="lead">
-                Los equipos de sistemas, partners y fintechs integran sin reinventar el core.
-                Personas y empresas usan automatizaciones donde el banco habilita.
+                Con la capa correcta, el banco conserva el control y vuelve a ser el canal donde
+                el cliente opera su día a día.
               </p>
               <div class="actions">
                 <a
@@ -107,128 +111,188 @@
                   href="https://zcal.co/wakeuplabs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Agendar llamada</a>
-                <a class="btn btn-secondary" href="#piloto">Ver alcance del piloto</a>
+                  >Agendar demo</a>
+                <a class="btn btn-secondary" href="#piloto">Ver piloto en 4-6 semanas</a>
               </div>
               <p class="proof">
-                Objetivo: más actividad en cuenta, menos abandono en digital, empresas que dejan de
-                irse por falta de integración, todo medible en números que ya manejan (activación,
-                ticket, NPS).
+                Objetivo: más actividad en cuenta, menos abandono en digital y empresas operando
+                dentro del banco con métricas que ya usan (activación, uso, errores, NPS).
               </p>
               <div class="hero-segments">
-                <a class="segment-card" href="#personas">
+                <a class="segment-card" href="#cambio">
                   <span class="segment-card__icon" aria-hidden="true">◎</span>
-                  <span class="segment-card__title">Personas · retail</span>
+                  <span class="segment-card__title">Clientes personas</span>
                   <span class="segment-card__hint"
-                    >Pagos, alertas y reglas desde la app o integraciones, siempre con límites que
-                    define el banco.</span
+                    >Menos fricción diaria y más operaciones digitales sin salir del banco.</span
                   >
                 </a>
-                <a class="segment-card" href="#empresas">
+                <a class="segment-card" href="#cambio">
                   <span class="segment-card__icon" aria-hidden="true">▢</span>
-                  <span class="segment-card__title">Empresas · B2B</span>
+                  <span class="segment-card__title">Clientes empresas</span>
                   <span class="segment-card__hint"
-                    >Tesorería y ERP conectados por API; operadores y scripts por CLI; IA por MCP
-                    cuando convenga.</span
+                    >Más integración operativa con ERP y menos dependencia de mail o Excel.</span
                   >
                 </a>
               </div>
             </div>
             <div class="hero-visual-wrap">
               <div class="hero-visual" aria-labelledby="hero-visual-title">
-                <p id="hero-visual-title" class="hero-visual__eyebrow">
-                  Dos clientes, una base técnica
-                </p>
+                <p id="hero-visual-title" class="hero-visual__eyebrow">Mismo banco. Nueva forma de operar.</p>
                 <div class="hero-visual__split">
                   <div class="hero-visual__lane">
-                    <span class="hero-visual__lane-label">Personas</span>
+                    <span class="hero-visual__lane-label">Canal personas</span>
                     <span class="hero-visual__lane-desc"
-                      >App, reglas y (si el banco habilita) asistentes con IA sobre la cuenta, con
-                      tope y consentimiento.</span
+                      >Autogestión, alertas y continuidad de trámites en canales digitales.</span
                     >
                   </div>
                   <div class="hero-visual__spine" aria-hidden="true">
                     <span class="hero-visual__spine-line"></span>
-                    <span class="hero-visual__spine-badge">API · CLI · MCP</span>
+                    <span class="hero-visual__spine-badge">Permisos · Auditoría · Trazabilidad</span>
                     <span class="hero-visual__spine-line"></span>
                   </div>
                   <div class="hero-visual__lane">
-                    <span class="hero-visual__lane-label">Empresas</span>
+                    <span class="hero-visual__lane-label">Canal empresas</span>
                     <span class="hero-visual__lane-desc"
-                      >Pagos, cobros y reporting al ERP; MCP para flujos con IA según política del
-                      banco.</span
+                      >Pagos, cobros y conciliación integrados a sistemas de tesorería.</span
                     >
                   </div>
                 </div>
                 <ul class="hero-visual__traits">
-                  <li>Permisos por rol</li>
-                  <li>Auditoría</li>
-                  <li>Listo para integraciones e IA</li>
+                  <li>Core intacto</li>
+                  <li>Riesgo y cumplimiento visibles</li>
+                  <li>Listo para integración y IA</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <div class="cli-showcase" id="banco-cli">
-            <div class="cli-showcase__grid">
-              <div class="cli-showcase__copy">
-                <p class="cli-showcase__label">bancos</p>
-                <p class="cli-showcase__headline">
-                  Tres entradas al mismo negocio: web services, terminal y servidor MCP.
-                </p>
-                <p class="cli-showcase__sub">
-                  El banco elige qué se publica, en qué entorno y con qué aprobaciones. Mismo
-                  criterio que en canales actuales, otra forma de conectar.
-                </p>
-                <ul class="cli-showcase__bullets">
-                  <li><strong>API:</strong> cuentas, movimientos, pagos, con permisos por rol</li>
-                  <li><strong>CLI:</strong> scripts, soporte avanzado, pruebas sin mil pantallas</li>
-                  <li><strong>MCP:</strong> herramientas concretas para modelos de IA, sin “atar a mano” el home banking</li>
-                </ul>
-              </div>
-              <figure class="terminal-card terminal-card--feature" aria-label="Consola ilustrativa">
-                <div class="terminal-card__bar">
-                  <span class="terminal-card__dots" aria-hidden="true"></span>
-                  <span class="terminal-card__title">~/piloto · banco-cli</span>
-                  <button type="button" class="terminal-card__copy" data-copy-for="hero">
-                    Copiar
-                  </button>
-                </div>
-                <div
-                  class="terminal-card__body terminal-card__body--syntax"
-                  contenteditable="true"
-                  spellcheck="false"
-                  data-terminal-body="hero"
-                  role="textbox"
-                  aria-multiline="true"
-                  aria-label="Ejemplo de consola. Podés editarlo; se guarda en este navegador."
-                >$ curl -fsSL https://example.bank/cli | sh
-$ banco session start --segmento personas,empresas
-# OK políticas y perfiles de canal cargados
-# OK rutas · onboarding digital · tesorería cliente · aprobaciones
-$ banco mcp serve --politicas entorno_piloto
-# OK herramientas expuestas para agentes · límites por scope
-$ banco api introspect --salida openapi
-$ banco qualificar --salida json
-{
-  "estado": "listo",
-  "siguiente": "definir_kpis_piloto"
-}</div>
-              </figure>
-            </div>
-            <p class="cli-showcase__note">
-              Ejemplo ilustrativo. El banco define permisos y entornos en producción.
-            </p>
+          <div class="cards two-col">
+            <article class="card">
+              <h3>Cómo funciona</h3>
+              <p>
+                Una capa entre tu core y el mundo operativo: ERP, apps y asistentes. Tu core queda
+                intacto, con las mismas reglas de negocio.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Qué cambia para el banco</h3>
+              <p>
+                Más uso en cuenta, menos tareas manuales en mesa y mejor retención de clientes que
+                hoy exigen integración.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="problema">
+        <div class="container">
+          <p class="section-kicker">Lo que realmente pasó</p>
+          <h2>No perdiste por producto. Perdiste por distribución.</h2>
+          <p class="section-lead">
+            Cuando operar con el banco depende de llamadas, mail y Excel, el cliente técnico se va
+            a quien sí se puede integrar en horas.
+          </p>
+          <ul class="grid-list">
+            <li>Integrar una fintech toma una tarde; integrar al banco hoy puede tomar días.</li>
+            <li>La operación manual expulsa actividad del canal y satura la mesa.</li>
+            <li>Las empresas no se van por tasa: se van por fricción operativa.</li>
+            <li>Sin superficie clara, crece el shadow IT y baja la trazabilidad.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section alt" id="impacto">
+        <div class="container">
+          <p class="section-kicker">Impacto de negocio</p>
+          <h2>El costo de no ser integrable se acumula cada mes.</h2>
+          <div class="cards two-col">
+            <article class="card">
+              <h3>59%</h3>
+              <p>de empresas ya evaluó reemplazar servicios bancarios por opciones fintech.</p>
+              <p><small>Fuente: Accenture</small></p>
+            </article>
+            <article class="card">
+              <h3>3x</h3>
+              <p>más rápido lanzan mejoras los jugadores con stack programable.</p>
+              <p><small>Fuente: Finnovista / Galileo</small></p>
+            </article>
+            <article class="card">
+              <h3>2-5x</h3>
+              <p>más revenue por usuario en modelos con integración abierta.</p>
+              <p><small>Fuente: Bain &amp; Company</small></p>
+            </article>
+            <article class="card">
+              <h3>Mensaje clave</h3>
+              <p>No falta producto. Falta la capa operativa que conecta al banco con el mundo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cambio">
+        <div class="container">
+          <p class="section-kicker">Antes y después</p>
+          <h2>Mismo banco. Nueva forma de operar.</h2>
+          <div class="cards two-col">
+            <article class="card">
+              <h3>Hoy</h3>
+              <ul>
+                <li>Pagos y trámites por mail, Excel y llamadas.</li>
+                <li>Conciliación manual y errores frecuentes.</li>
+                <li>Mesa ocupada en tareas repetitivas.</li>
+                <li>Integraciones ad hoc sin traza consistente.</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Con la capa programable</h3>
+              <ul>
+                <li>Operación desde ERP, app y herramientas autorizadas.</li>
+                <li>Procesos más automatizados, con menos intervención manual.</li>
+                <li>Mesa enfocada en excepciones y casos de valor.</li>
+                <li>Permisos, auditoría y trazabilidad por política del banco.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="regulacion">
+        <div class="container">
+          <p class="section-kicker">Open Finance en la región</p>
+          <h2>La regulación no espera. Tu competencia tampoco.</h2>
+          <p class="section-lead">
+            Las instituciones que ordenan su capa de integración hoy van a llegar mejor al próximo
+            estándar regulatorio y comercial.
+          </p>
+          <div class="cards two-col">
+            <article class="card">
+              <h3>Brasil</h3>
+              <p>Operativo. Millones de consentimientos activos.</p>
+            </article>
+            <article class="card">
+              <h3>Colombia y Chile</h3>
+              <p>Mandatorio o en implementación obligatoria en el corto plazo.</p>
+            </article>
+            <article class="card">
+              <h3>México</h3>
+              <p>Ecosistema fintech consolidado, presión competitiva sostenida.</p>
+            </article>
+            <article class="card">
+              <h3>Argentina</h3>
+              <p>Marco en construcción. Ventana abierta para adelantarse con pilotos medibles.</p>
+            </article>
           </div>
         </div>
       </section>
 
       <section class="section" id="usuarios">
         <div class="container">
-          <p class="section-kicker">Usuarios y ejemplos</p>
-          <h2>Quién usa la API, la CLI y el MCP</h2>
+          <p class="section-kicker" id="tecnico">Para tu equipo técnico</p>
+          <h2>API, CLI y MCP sobre el mismo contrato bancario</h2>
           <p class="section-lead">
-            Las tres herramientas conviven. Quién las usa depende del rol que autorice el banco.
+            Esta capa es el detalle de implementación. La decisión de negocio va primero; la
+            ejecución técnica queda lista para cuando el banco avance.
           </p>
           <div class="cards three-tools">
             <article class="card">

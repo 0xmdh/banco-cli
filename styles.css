@@ -137,6 +137,14 @@ body {
   height: auto;
 }
 
+.brand__title {
+  color: var(--rs-heading);
+  font-weight: 800;
+  font-size: 0.98rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
 .brand__tagline {
   font-size: 0.72rem;
   font-weight: 500;

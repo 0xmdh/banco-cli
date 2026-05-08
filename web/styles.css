@@ -115,6 +115,8 @@ body {
   gap: clamp(28px, 5vw, 72px);
   padding: 24px 0;
   flex-wrap: nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .brand {

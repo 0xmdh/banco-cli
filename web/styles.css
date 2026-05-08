@@ -122,8 +122,10 @@ body {
 
 .brand {
   display: flex;
-  align-items: center;
-  max-width: min(100%, 16rem);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  max-width: min(100%, 18rem);
   flex: 0 1 auto;
   margin-right: auto;
   text-decoration: none;
@@ -131,8 +133,15 @@ body {
 
 .brand__logo {
   display: block;
-  width: clamp(120px, 12vw, 168px);
+  width: clamp(96px, 9vw, 136px);
   height: auto;
+}
+
+.brand__tagline {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--rs-muted);
+  letter-spacing: -0.01em;
 }
 
 .nav-actions {

@@ -31,11 +31,6 @@
   }
 
   function initTheme() {
-    var stored = getStoredTheme();
-    if (stored === "light" || stored === "dark") {
-      applyTheme(stored);
-      return;
-    }
     applyTheme("light");
   }
 
@@ -211,9 +206,7 @@
     initTheme();
 
     var dayBtn = document.getElementById("theme-day");
-    var nightBtn = document.getElementById("theme-night");
     if (dayBtn) dayBtn.addEventListener("click", function () { applyTheme("light"); });
-    if (nightBtn) nightBtn.addEventListener("click", function () { applyTheme("dark"); });
 
     initTerminals();
     initForm();

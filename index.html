@@ -17,14 +17,7 @@
     />
     <script>
       (function () {
-        var t = null;
-        try {
-          t = localStorage.getItem("banco-cli-theme");
-        } catch (e) {}
-        if (t !== "light" && t !== "dark") {
-          t = "light";
-        }
-        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute("data-theme", "light");
       })();
     </script>
     <link rel="stylesheet" href="/styles.css" />
@@ -33,17 +26,23 @@
     <header class="site-header">
       <div class="container nav">
         <a class="brand" lang="es" href="/" aria-label="Ir al inicio">
-          <span class="brand__title">Bancos <span class="brand__x">×</span> Wake Up Labs</span>
-          <span class="brand__tagline">Finanzas programables para agentes y programadores</span>
+          <span class="brand__title">WUP Finance by WakeUp Labs</span>
+          <span class="brand__tagline">Finanzas programables para banca en Latam</span>
         </a>
         <div class="nav-actions">
-          <nav class="nav-audience" aria-label="Secciones">
-            <a class="nav-audience__link" href="#problema">Problema</a>
-            <span class="nav-audience__sep" aria-hidden="true">/</span>
-            <a class="nav-audience__link" href="#impacto">Impacto</a>
+          <nav class="nav-main" aria-label="Secciones">
+            <a class="nav-product-link" href="#problema">Problema</a>
+            <a class="nav-product-link" href="#impacto">Impacto</a>
+            <a class="nav-product-link" href="#piloto">Piloto</a>
+            <a class="nav-product-link" href="#tecnico">Equipo técnico</a>
+            <a
+              class="nav-product-link"
+              href="https://zcal.co/wakeuplabs"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Agendar demo</a
+            >
           </nav>
-          <a class="nav-product-link" href="#piloto">Piloto</a>
-          <a class="nav-product-link" href="#tecnico">Equipo técnico</a>
           <div
             class="theme-toggle"
             role="group"
@@ -57,21 +56,7 @@
             >
               Día
             </button>
-            <button
-              type="button"
-              class="theme-toggle__btn"
-              id="theme-night"
-              aria-pressed="false"
-            >
-              Noche
-            </button>
           </div>
-          <a
-            class="btn btn-secondary btn-nav"
-            href="https://zcal.co/wakeuplabs"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Agendar llamada</a>
         </div>
       </div>
     </header>
@@ -98,70 +83,18 @@
                 <em>Ganaron por ser programables.</em>
               </h1>
               <p class="h1-sub">
-                Tenés productos, escala e infraestructura. Falta una capa para operar con ERPs,
-                apps y agentes de IA sin tocar tu core.
-              </p>
-              <p class="lead">
-                Con la capa correcta, el banco conserva el control y vuelve a ser el canal donde
-                el cliente opera su día a día.
+                Tu banco tiene más productos, más escala y más infraestructura que cualquier
+                fintech. Solo le falta una cosa: hablar con el mundo. Wup le pone esa capa, sin
+                tocar tu core.
               </p>
               <div class="actions">
+                <a class="btn btn-secondary" href="#piloto">Ver cómo funciona en 4 semanas</a>
                 <a
                   class="btn btn-primary"
                   href="https://zcal.co/wakeuplabs"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Agendar demo</a>
-                <a class="btn btn-secondary" href="#piloto">Ver piloto en 4-6 semanas</a>
-              </div>
-              <p class="proof">
-                Objetivo: más actividad en cuenta, menos abandono en digital y empresas operando
-                dentro del banco con métricas que ya usan (activación, uso, errores, NPS).
-              </p>
-              <div class="hero-segments">
-                <a class="segment-card" href="#cambio">
-                  <span class="segment-card__icon" aria-hidden="true">◎</span>
-                  <span class="segment-card__title">Clientes personas</span>
-                  <span class="segment-card__hint"
-                    >Menos fricción diaria y más operaciones digitales sin salir del banco.</span
-                  >
-                </a>
-                <a class="segment-card" href="#cambio">
-                  <span class="segment-card__icon" aria-hidden="true">▢</span>
-                  <span class="segment-card__title">Clientes empresas</span>
-                  <span class="segment-card__hint"
-                    >Más integración operativa con ERP y menos dependencia de mail o Excel.</span
-                  >
-                </a>
-              </div>
-            </div>
-            <div class="hero-visual-wrap">
-              <div class="hero-visual" aria-labelledby="hero-visual-title">
-                <p id="hero-visual-title" class="hero-visual__eyebrow">Mismo banco. Nueva forma de operar.</p>
-                <div class="hero-visual__split">
-                  <div class="hero-visual__lane">
-                    <span class="hero-visual__lane-label">Canal personas</span>
-                    <span class="hero-visual__lane-desc"
-                      >Autogestión, alertas y continuidad de trámites en canales digitales.</span
-                    >
-                  </div>
-                  <div class="hero-visual__spine" aria-hidden="true">
-                    <span class="hero-visual__spine-line"></span>
-                    <span class="hero-visual__spine-badge">Permisos · Auditoría · Trazabilidad</span>
-                    <span class="hero-visual__spine-line"></span>
-                  </div>
-                  <div class="hero-visual__lane">
-                    <span class="hero-visual__lane-label">Canal empresas</span>
-                    <span class="hero-visual__lane-desc"
-                      >Pagos, cobros y conciliación integrados a sistemas de tesorería.</span
-                    >
-                  </div>
-                </div>
-                <ul class="hero-visual__traits">
-                  <li>Core intacto</li>
-                  <li>Riesgo y cumplimiento visibles</li>
-                  <li>Listo para integración y IA</li>
-                </ul>
+                  >Agendar una demo</a>
               </div>
             </div>
           </div>
@@ -194,7 +127,7 @@
             a quien sí se puede integrar en horas.
           </p>
           <ul class="grid-list">
-            <li>Integrar una fintech toma una tarde; integrar al banco hoy puede tomar días.</li>
+            <li>Integrar una fintech toma una tarde; integrar al banco hoy puede tomar semanas.</li>
             <li>La operación manual expulsa actividad del canal y satura la mesa.</li>
             <li>Las empresas no se van por tasa: se van por fricción operativa.</li>
             <li>Sin superficie clara, crece el shadow IT y baja la trazabilidad.</li>
@@ -205,7 +138,7 @@
       <section class="section alt" id="impacto">
         <div class="container">
           <p class="section-kicker">Impacto de negocio</p>
-          <h2>El costo de no ser integrable se acumula cada mes.</h2>
+          <h2>El costo de no ser programable se acumula cada mes.</h2>
           <div class="cards two-col">
             <article class="card">
               <h3>59%</h3>
@@ -839,7 +772,7 @@ Mandato único del banco (personas + empresas como clientes)
             href="https://zcal.co/wakeuplabs"
             target="_blank"
             rel="noopener noreferrer"
-            >Agendar llamada</a>
+            >Agendar demo</a>
         </div>
       </section>
     </main>

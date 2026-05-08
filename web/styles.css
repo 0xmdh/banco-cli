@@ -154,6 +154,12 @@ body {
   flex: 0 1 auto;
 }
 
+.nav-main {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .nav-product-link {
   font-size: 0.75rem;
   font-weight: 600;

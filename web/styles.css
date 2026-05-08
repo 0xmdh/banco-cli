@@ -122,33 +122,17 @@ body {
 
 .brand {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  font-weight: 700;
-  font-size: 0.9375rem;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  max-width: min(100%, 24rem);
+  align-items: center;
+  max-width: min(100%, 16rem);
   flex: 0 1 auto;
   margin-right: auto;
   text-decoration: none;
 }
 
-.brand__title {
-  color: var(--rs-heading);
-  font-weight: 800;
-}
-
-.brand__tagline {
-  font-weight: 500;
-  font-size: 0.75rem;
-  color: var(--rs-muted);
-  letter-spacing: -0.01em;
-}
-
-.brand__x {
-  font-weight: 500;
-  color: var(--rs-muted);
+.brand__logo {
+  display: block;
+  width: clamp(120px, 12vw, 168px);
+  height: auto;
 }
 
 .nav-actions {
@@ -417,12 +401,22 @@ h3 {
 .hero-copy h1 em {
   font-style: italic;
   font-weight: 500;
+  font-size: 0.82em;
 }
 
 .hero-copy p.h1-sub {
   max-width: 38rem;
   margin-top: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-proof {
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--rs-heading);
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 .eyebrow {
@@ -1253,6 +1247,13 @@ html[data-theme="light"] .section.alt .card {
   align-items: center;
   gap: 0.85rem;
   background: linear-gradient(180deg, #f8fbff 0%, #f2f7ff 100%);
+}
+
+.explore-accordion__summary {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding-left: clamp(22px, 3vw, 42px) !important;
+  padding-right: clamp(22px, 3vw, 42px) !important;
 }
 
 .explore-accordion > summary::-webkit-details-marker {
